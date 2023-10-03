@@ -9,11 +9,11 @@
  }
 
  .a {
-     background: blue;
+     background: rgb(0, 88, 139);
      text-align: center;
  }
  .b {
-     background: gray;
+     background: rgba(173, 216, 230, 0.452);
  }
  .notacion {
       color: gray;

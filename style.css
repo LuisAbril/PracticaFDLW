@@ -1,3 +1,37 @@
-.col-sm-1{
+ .grid {
+     display: grid;
+     grid-template-columns: 1fr 10fr 1fr;
+     grid-template-rows: 50px fr 20px;
+ }
 
-}
+ .item {
+     color: white;
+ }
+
+ .a {
+     background: blue;
+     text-align: center;
+ }
+ .b {
+     background: gray;
+ }
+ .notacion {
+      color: gray;
+  }
+
+  .container {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      background: white;
+      width: 160px;
+  }
+
+  .cuadrado {
+      background: grey;
+      min-width: 200px;
+      min-height: 200px;
+      border: 1px solid black;
+      text-align: center;
+      margin: 3px;
+  }

@@ -1,6 +1,6 @@
  .grid {
      display: grid;
-     grid-template-columns: 1fr 10fr 1fr;
+     grid-template-columns: 1fr 15fr 1fr;
      grid-template-rows: 50px fr 20px;
  }
 
@@ -8,30 +8,71 @@
      color: white;
  }
 
- .a {
+ .header {
      background: rgb(0, 88, 139);
      text-align: center;
  }
- .b {
-     background: rgba(173, 216, 230, 0.452);
+ .tittle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
  }
- .notacion {
-      color: gray;
+
+ .sidebar {
+    background: rgba(173, 216, 230, 0.452);
+ }
+
+ .content {
+    background: rgb(131, 183, 209);
+  }
+
+  .footer {
+      background: rgb(0, 88, 139);
   }
 
   .container {
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
-      background: white;
+      background: rgb(131, 183, 209);
       width: 160px;
+      margin-top: 10px;
+      margin-bottom: 10px;
   }
 
   .cuadrado {
-      background: grey;
-      min-width: 200px;
-      min-height: 200px;
+      background: whitesmoke;
+      min-width: 250px;
+      min-height: 250px;
       border: 1px solid black;
       text-align: center;
-      margin: 3px;
+      margin: 10px auto;
   }
+.preview {
+    display: grid;
+    grid-template-rows: 8fr 1fr 1fr;
+}
+
+.prodimg {
+    max-height: 250px;
+}
+
+.prodname {
+    display: flex;
+    align-items: right;
+    margin-left: 7px;
+    margin-top: 3px;
+    font-family: verdana;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(7, 7, 99);
+}
+
+.price {
+    display: flex;
+    align-items: right;
+    margin-left: 12px;
+    font-family: verdana;
+    font-size: 15px;
+    color: rgb(82, 78, 78);
+}

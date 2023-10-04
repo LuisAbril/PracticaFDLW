@@ -20,8 +20,20 @@
 
             <div class="content">
                 <div class="container">
-                    <div class="cuadrado"></div>
-                    <div class="cuadrado"></div>
+                    <div class="cuadrado">
+                        <div class="preview">
+                            <img src="https://static.k-tuin.com/media/catalog/product/cache/1/image/0dc2d03fe217f8c83829496872af24a0/i/p/iphone-15-pro-max-titanio-azul-256-gb.jpg" class="prodimg">
+                            <div class="prodname">iPhone 15</div>
+                            <div class="price">1000€</div>
+                        </div>
+                    </div>
+                    <div class="cuadrado">
+                        <div class="preview">
+                            <img src="https://static.k-tuin.com/media/catalog/product/cache/1/image/0dc2d03fe217f8c83829496872af24a0/i/p/iphone-15-pro-max-titanio-azul-256-gb.jpg" class="prodimg">
+                            <div class="prodname">iPhone 15</div>
+                            <div class="price">1000€</div>
+                        </div>
+                    </div>
                     <div class="cuadrado"></div>
                     <div class="cuadrado"></div>
                     <div class="cuadrado"></div>

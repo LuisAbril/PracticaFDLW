@@ -45,7 +45,7 @@
   }
 .preview {
     display: grid;
-    grid-template-rows: 8fr 1fr 1fr;
+    grid-template-rows: 8fr 1fr;
 }
 
 .prodimg {

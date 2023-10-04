@@ -1,78 +1,100 @@
- .grid {
-     display: grid;
-     grid-template-columns: 1fr 15fr 1fr;
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 15fr 1fr;
+}
+
+.header {
+    background: rgb(0, 88, 139);
+}
+.tittle{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+}
+
+.sidebar {
+   background: rgba(173, 216, 230, 0.452);
+}
+
+.content {
+   background: rgb(131, 183, 209);
  }
 
- .header {
+ .footer {
      background: rgb(0, 88, 139);
  }
- .tittle{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+
+ .container {
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: row;
+     background: rgb(131, 183, 209);
+     width: 160px;
+     margin-top: 10px;
+     margin-bottom: 10px;
  }
 
- .sidebar {
-    background: rgba(173, 216, 230, 0.452);
+ .cuadrado {
+     background: whitesmoke;
+     min-width: 250px;
+     min-height: 250px;
+     border: 1px solid black;
+     text-align: center;
+     margin: 10px auto;
  }
-
- .content {
-    background: rgb(131, 183, 209);
-  }
-
-  .footer {
-      background: rgb(0, 88, 139);
-  }
-
-  .container {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      background: rgb(131, 183, 209);
-      width: 160px;
-      margin-top: 10px;
-      margin-bottom: 10px;
-  }
-
-  .cuadrado {
-      background: whitesmoke;
-      min-width: 250px;
-      min-height: 250px;
-      border: 1px solid black;
-      text-align: center;
-      margin: 10px auto;
-  }
 .preview {
-    display: grid;
-    grid-template-rows: 8fr 1fr;
+   display: grid;
+   grid-template-rows: 8fr 1fr;
 }
 
 .prodimg {
-    width: 250px;
+   width: 250px;
 
 }
 
 .prodname {
-    display: flex;
-    align-items: right;
-    margin-left: 7px;
-    margin-top: 3px;
-    font-family: verdana;
-    font-size: 15px;
-    font-weight: bold;
-    color: rgb(7, 7, 99);
+   display: flex;
+   align-items: right;
+   margin-left: 7px;
+   margin-top: 3px;
+   font-family: verdana;
+   font-size: 15px;
+   font-weight: bold;
+   color: rgb(7, 7, 99);
 }
 
 .price {
-    display: flex;
-    align-items: right;
-    margin-left: 12px;
-    font-family: verdana;
-    font-size: 15px;
-    color: rgb(82, 78, 78);
+   display: flex;
+   align-items: right;
+   margin-left: 12px;
+   font-family: verdana;
+   font-size: 15px;
+   color: rgb(82, 78, 78);
 }
 .productosubelemento{
-    width: 500px;
-    align-self: center;
-    margin: 40px;
+   width:95%;
+   margin:10px auto;
+   margin-left: 10px;
+}
+
+.subelemimg{
+   max-width: 50%;
+   min-width: 300px;
+}
+
+.subelemname{
+   max-width: 50%;
+   min-width:300px;
+   text-align:left justify;
+   margin: 10px;
+}
+
+.prodinfo{
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   justify-content: center;
+   background: rgb(131, 183, 209);
+   margin-top: 10px;
+   margin-bottom: 10px;
 }

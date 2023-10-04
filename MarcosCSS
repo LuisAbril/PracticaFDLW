@@ -35,10 +35,35 @@
 }
 
 .cuadrado {
-    background: grey;
+    background: whitesmoke;
     min-width: 250px;
     min-height: 250px;
     border: 1px solid black;
     text-align: center;
     margin: 10px auto;
+}
+.preview{
+    display:grid;
+    grid-template-rows: 8fr 1fr 1fr;
+}
+.prodimg{
+    max-height: 250px;
+}
+.prodname{
+    display:flex;
+    align-items: right;
+    margin-left: 7px;
+    margin-top:3px;
+    font-family: verdana;
+    font-size: 15px;
+    font-weight: bold;
+    color:rgb(7, 7, 99);
+}
+.price{
+    display:flex;
+    align-items: right;
+    margin-left: 12px;
+    font-family: verdana;
+    font-size: 15px;
+    color:rgb(82, 78, 78);
 }

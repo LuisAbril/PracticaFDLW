@@ -1,7 +1,6 @@
  .grid {
      display: grid;
      grid-template-columns: 1fr 15fr 1fr;
-     grid-template-rows: 50px fr 20px;
  }
 
  .header {

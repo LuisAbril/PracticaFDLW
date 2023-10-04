@@ -4,13 +4,8 @@
      grid-template-rows: 50px fr 20px;
  }
 
- .item {
-     color: white;
- }
-
  .header {
      background: rgb(0, 88, 139);
-     text-align: center;
  }
  .tittle{
         display: flex;
@@ -54,7 +49,8 @@
 }
 
 .prodimg {
-    max-height: 250px;
+    width: 250px;
+
 }
 
 .prodname {
@@ -75,4 +71,9 @@
     font-family: verdana;
     font-size: 15px;
     color: rgb(82, 78, 78);
+}
+.productosubelemento{
+    width: 500px;
+    align-self: center;
+    margin: 40px;
 }

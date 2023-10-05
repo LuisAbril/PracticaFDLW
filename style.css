@@ -1,15 +1,41 @@
 .grid {
-    display: grid;
-    grid-template-columns: 1fr 15fr 1fr;
+   display: grid;
+   grid-template-columns: 1fr 15fr 1fr;
 }
 
 .header {
-    background: rgb(0, 88, 139);
+   background: rgb(0, 88, 139);
+   color:aliceblue;
+   font-style:italic;
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.logo{
+   max-width: 90%;
+   margin:5px;
+   filter: invert(95%);
+   min-width: 50px;
+}
+.pagename{
+   margin:1%;
+   max-width: 70px;
+}
+#nombre{
+   margin-top: 30px;
+}
+#top{
+   display:grid;
+   grid-template-columns: [x0] 1fr [x1] 15fr [x2];
+   align-items: center;
+}
+.back{
+   grid-column: x0/x2;
+   font-family: 'Courier New', Courier, monospace;
+   font-style: normal;
 }
 .tittle{
-       display: flex;
-       justify-content: center;
-       align-items: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .sidebar {
@@ -21,26 +47,26 @@
  }
 
  .footer {
-     background: rgb(0, 88, 139);
+   background: rgb(0, 88, 139);
  }
 
  .container {
-     display: flex;
-     flex-wrap: wrap;
-     flex-direction: row;
-     background: rgb(131, 183, 209);
-     width: 160px;
-     margin-top: 10px;
-     margin-bottom: 10px;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   background: rgb(131, 183, 209);
+   width: 160px;
+   margin-top: 10px;
+   margin-bottom: 10px;
  }
 
  .cuadrado {
-     background: whitesmoke;
-     min-width: 250px;
-     min-height: 250px;
-     border: 1px solid black;
-     text-align: center;
-     margin: 10px auto;
+   background: whitesmoke;
+   min-width: 250px;
+   min-height: 250px;
+   border: 1px solid black;
+   text-align: center;
+   margin: 10px auto;
  }
 .preview {
    display: grid;
@@ -80,13 +106,14 @@
 .subelemimg{
    max-width: 50%;
    min-width: 300px;
+   margin: 10px auto;
 }
 
 .subelemname{
-   max-width: 50%;
-   min-width:300px;
-   text-align:left justify;
-   margin: 10px;
+   max-width: 45%;
+   min-width:200px;
+   margin: 20px auto;
+   color: rgb(5, 5, 60);
 }
 
 .prodinfo{

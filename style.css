@@ -65,18 +65,26 @@
    min-width: 250px;
    min-height: 250px;
    border: 1px solid black;
+   border-radius: 15px;
    text-align: center;
    margin: 10px auto;
+   
  }
 .preview {
    display: grid;
-   grid-template-rows: 8fr 1fr;
+   grid-template-rows: 50fr 1fr;
 }
 
 .prodimg {
    width: 250px;
-
+   border-top-left-radius: 15px;
+   border-top-right-radius: 15px;
 }
+
+.redir{
+   text-decoration: none;
+}
+
 
 .prodname {
    display: flex;

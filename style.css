@@ -203,17 +203,19 @@
 #slider figure {
    width: 300%;
    position: relative;
-   animation: 9s slider infinite;
+   animation: 18s slider infinite;
 }
 
 #slider figure:hover {
+   animation-play-state: running;
    /*animation-play-state: paused; enable for pause on hover*/
 }
 
 #slider figure img {
+   min-height: 400px;
    width: 33.333333333%;
    height: 100%;
-   float: left;
+   float: right;
 }
 
 

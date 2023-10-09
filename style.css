@@ -54,10 +54,13 @@
    display: flex;
    flex-wrap: wrap;
    flex-direction: row;
-   background: rgb(131, 183, 209);
    width: 160px;
    margin-top: 10px;
    margin-bottom: 10px;
+ }
+
+ .main{
+   background: rgb(131, 183, 209);
  }
 
  .cuadrado {
@@ -133,3 +136,32 @@
    margin-top: 10px;
    margin-bottom: 10px;
 }
+
+.redesociales{
+   background: rgb(0, 0, 0);
+   min-width: 50px;
+   min-height: 50px;
+   border: 1px solid black;
+   border-radius: 5px;
+   text-align: center;
+   margin: 5px auto;
+}
+
+ .container2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 250px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+ }
+
+ .redes{
+   width: 30px;
+   height: 30px;
+   margin: 10px;
+   margin-top: 13px;
+ }
+ .colorkbd{
+   background: rgb(24, 110, 153);
+ }

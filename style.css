@@ -138,6 +138,48 @@
    margin-bottom: 10px;
 }
 
+.comentbox{
+   display:flex;
+   flex-direction: row;
+   justify-content: center;
+   flex-wrap: wrap;
+   background: white;
+}
+.titlecoment{
+   min-width: 100%;
+}
+.coment{
+   min-width: 97%;
+   margin:10px;
+   background: rgb(131, 183, 209);
+   border-radius: 7px;
+   display: grid;
+   grid-template-columns: [x0] 70px [x1] 1fr [x2];
+   grid-template-rows: [y0] 25px [y1] 1fr [y2];
+}
+.pfp{
+   grid-column:x0/x1;
+   grid-row:y0/y2;
+   margin:10px;
+}
+.pic{
+   max-height: 50px;
+   max-width: 50px;
+   border-radius: 10000px;
+}
+.username{
+   grid-column: x1/x2;
+   grid-row: y0/y1;
+   margin-top:5px;
+   font-weight: bolder;
+}
+.opinion{
+   grid-column: x1/x2;
+   grid-row: y1/y2;
+   margin-top:3px;
+   margin-left: 10px;
+}
+
 .redesociales{
    background: rgb(0, 0, 0);
    min-width: 50px;

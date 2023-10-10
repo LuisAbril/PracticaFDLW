@@ -1,13 +1,14 @@
 .grid {
    display: grid;
    grid-template-columns: 1fr 15fr 1fr;
+   
 }
 
 .header {
    background: rgb(0, 88, 139);
    color:aliceblue;
    font-style:italic;
-   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   font-family:'Bodoni','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .logo{
    max-width: 90%;

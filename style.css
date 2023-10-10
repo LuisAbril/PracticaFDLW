@@ -151,7 +151,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    width: 250px;
+    width:fit-content;
     margin-top: 10px;
     margin-bottom: 10px;
  }
@@ -162,8 +162,14 @@
    margin: 10px;
    margin-top: 13px;
  }
+ .fondo{
+   background-color: white;
+   border-radius: 5px;
+ }
  .colorkbd{
    background: rgb(24, 110, 153);
+   margin: 15px;
+   
  }
 
 #slider {

@@ -160,6 +160,11 @@
 }
 .titlecoment{
    min-width: 100%;
+   color: white;
+   font-size: 150%;
+   font-family: 'Arial Narrow Bold', sans-serif;
+   font-weight: bolder;
+   margin-left: 30px;
 }
 .coment{
    min-width: 97%;
@@ -168,11 +173,11 @@
    border-radius: 7px;
    display: grid;
    grid-template-columns: [x0] 70px [x1] 1fr [x2];
-   grid-template-rows: [y0] 25px [y1] 1fr [y2];
+   grid-template-rows: [y0] 25px [y1] 20px [y2] 1fr [y3];
 }
 .pfp{
    grid-column:x0/x1;
-   grid-row:y0/y2;
+   grid-row:y0/y3;
    margin:10px;
 }
 .pic{
@@ -186,11 +191,20 @@
    margin-top:5px;
    font-weight: bolder;
 }
-.opinion{
+.estrellas{
    grid-column: x1/x2;
    grid-row: y1/y2;
+   font-weight: 600;
+}
+.staricon{
+   color:rgb(240, 163, 63);
+}
+.opinion{
+   grid-column: x1/x2;
+   grid-row: y2/y3;
    margin-top:3px;
    margin-left: 10px;
+   margin-bottom: 10px;
 }
 
 .redesociales{
@@ -280,8 +294,24 @@
    float: right;
 }
 
+.comentedit{
+   min-width: 97%;
+   margin:10px;
+   background: whitesmoke;
+   border-radius: 7px;
+   display: grid;
+   grid-template-columns: [x0] 70px [x1] 1fr [x2];
+   grid-template-rows: [y0] 25px [y1] 40px [y2] 1fr [y3];
+}
+
+#val{
+   margin:10px;
+   margin-right:0px;
+}
+
 .campocoment{
-   width: 15fr;
+   width: 97%;
+   height: auto;
 }
 
 .btpublicar{

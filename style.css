@@ -45,7 +45,7 @@
    color:white;
    font-size: small;
 }
-}
+
 .tittle{
    display: flex;
    justify-content: center;
@@ -280,6 +280,13 @@
    float: right;
 }
 
+.campocoment{
+   width: 15fr;
+}
+
+.btpublicar{
+   margin: 10px;
+}
 
 
 

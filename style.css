@@ -318,6 +318,11 @@
    margin: 10px;
 }
 
+.bottom {
+   display: grid;
+   grid-template-columns: [x0] 15fr [x2] 3fr [x3];
+   align-items: center;
+}
 
 
 

@@ -325,6 +325,22 @@
    align-items: center;
 }
 
+.newcontent{
+   margin:20px;
+   margin-left: 20px;
+}
+.newcontent2 {
+   margin: 20px;
+   margin-left: 60px;
+}
+
+.bordes{
+   border-radius: 10px;
+}
+
+.desc{
+   width: 95%;
+}
 
 
 

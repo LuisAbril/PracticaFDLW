@@ -34,7 +34,7 @@
    grid-column: x2/x3;
 }
 #btnBack{
-   background-color: rgba(11, 6, 82, 0.562);
+   background-color: rgb(15, 9, 102);
    min-width: 150px;
    max-height: 40px;
    border-radius: 15px;
@@ -222,7 +222,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    width:fit-content;
+    width: fit-content;
     margin-top: 10px;
     margin-bottom: 10px;
  }
@@ -343,6 +343,24 @@
 }
 
 .fecha{
-   width:94px;
+   width:120px;
 }
 
+.add {
+   position: fixed;
+   bottom: 17px;
+   right: 1rem;
+   width: 57px;
+   height: 57px;
+   border-radius: 5000px;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   background-color: rgb(15, 9, 102);
+}
+.mas{
+   color: white;
+   font-size: 36px;
+   text-align: center;
+   text-justify: auto;
+}

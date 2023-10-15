@@ -22,7 +22,7 @@
                 <p>APPEL</p>
             </h1>
             <div class="back"><a class="btn btn-lg" id="btnBack" href="Practica.html">
-                    <p class="backtext">Seguir Buscando <i class="bi bi-search"></i></p>
+                    <p class="backtext"><i class="bi bi-arrow-left"></i>  Pagina Principal</p>
                 </a></div>
         </div>
 
@@ -54,13 +54,24 @@
                             <input type="date" class="fecha"/>
                         </p>
                         <p>
+                            Imagen del producto:<br>
+                            <input type="file" name="fichero" accept=".jpg, .jpeg, .png" />
+                            
+                        </p>
+                        <p>
                             Descripción del producto:<br>
                             
                             <textarea name="mensaje" class="bordes desc"></textarea>
                         </p>
+                        
                         <p>
-                            Imagen del producto:<br>
-                            <input type="file" name="fichero" accept=".jpg, .jpeg, .png" />
+                            Tipo de cargador: 
+                            <select name="tipocargador">
+                                <option>Ninguno</option>
+                                <option>Lighting</option>
+                                <option>USB-C</option>
+                                <option>Inalambrico</option>
+                            </select>
                             
                         </p>
                     

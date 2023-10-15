@@ -40,11 +40,14 @@
    border-radius: 15px;
    text-align: center;
    margin:10px;
-}
-.backtext{
    text-decoration: none;
    color:white;
    font-size: small;
+}
+#btnBack:hover{
+   background-color: rgb(9, 8, 83);
+   transition-duration: .1s;
+   font-weight: 500;
 }
 
 .tittle{
@@ -130,9 +133,9 @@
 }
 
 .subelemimg{
-   max-width: 50%;
-   min-width: 300px;
-   margin: 10px auto;
+   max-width: 40%;
+   min-width: 400px;
+   margin: 20px auto;
 }
 
 .subelemname{
@@ -207,6 +210,9 @@
    margin-left: 10px;
    margin-bottom: 10px;
 }
+.campocoment{
+   max-height: 200px;
+}
 
 .redesociales{
    background: rgb(0, 0, 0);
@@ -218,30 +224,29 @@
    margin: 5px auto;
 }
 
- .container2 {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: fit-content;
-    margin-top: 10px;
-    margin-bottom: 10px;
- }
+.container2 {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   width: fit-content;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
 
- .redes{
+.redes{
    width: 30px;
    height: 30px;
    margin: 10px;
    margin-top: 13px;
- }
- .fondo{
+}
+.fondo{
    background-color: white;
    border-radius: 5px;
- }
- .colorkbd{
+}
+.colorkbd{
    background: rgb(24, 110, 153);
    margin: 15px;
-   
- }
+}
 
 #slider {
    overflow: hidden;
@@ -279,6 +284,7 @@
 
 #slider figure {
    width: 300%;
+   height: 100%;
    position: relative;
    animation: 18s slider infinite;
 }
@@ -289,7 +295,6 @@
 }
 
 #slider figure img {
-   min-height: 400px;
    width: 33.333333333%;
    height: 100%;
    float: right;
@@ -350,17 +355,28 @@
    position: fixed;
    bottom: 17px;
    right: 1rem;
-   width: 57px;
-   height: 57px;
+   width: 53px;
+   height: 53px;
    border-radius: 5000px;
-   border: none;
-   outline: none;
+   border: solid rgb(15, 9, 102);
    cursor: pointer;
-   background-color: rgb(15, 9, 102);
+   background-color: whitesmoke;
+}
+.add:hover{
+   background: rgb(15, 9, 102);
+   transition-duration: 0.25s;
 }
 .mas{
-   color: white;
+   position: absolute;
+   color: rgb(15, 9, 102);
    font-size: 36px;
-   text-align: center;
-   text-justify: auto;
+   right: -4px;
+   top:-3px;
+   padding: 10px;
+   padding-top: 0px;
+   padding-bottom: 0px;
+}
+.mas:hover{
+   color:white;
+   transition-duration: 0.2s;
 }

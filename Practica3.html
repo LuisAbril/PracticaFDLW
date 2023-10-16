@@ -29,14 +29,15 @@
         <div class="header"></div>
         <div class="sidebar"></div>
         <div class="content ">
-            <h1 class="newcontent">Subida de nuevo producto</h1>
+            <h2 class="newcontent">Subida de nuevo producto</h2>
             <form class="newcontent2">
 
                         <p>
+                            <h6>Introduzca del nombre de su producto:</h6>
                             <input type="text" class="introd" placeholder="Nombre de su producto">
                         </p>
                         <p>
-                            Tipo de producto:
+                            <h6>Tipo de producto:</h6>
                             <select name="tipoprod">
                                 <option>Móvil</option>
                                 <option>Tableta</option>
@@ -47,40 +48,43 @@
                             </select>
                         </p>
                         <p>
+                            <h6>¿Que precio tendrá su producto?</h6>
                             <input class="introd precio" type="text" placeholder="Precio">€</input>
                         </p>
-                        
+                
                         <p>
-                            <input type="checkbox" name="unlimited"> Es edición limitada
-                            <br>
-                            En caso de que si lo sea seleccione hasta que fecha se podrá comprar el producto:
-                            <br>
-                            <input type="date" class="fecha"/>
-                        </p>
-                        <p>
-                            Imagen del producto:<br>
-                            <input type="file" name="fichero" accept=".jpg, .jpeg, .png" />
+                            <h6>Imagen del producto:</h6>
+                            <input type="text" name="imagen" class="imagenform" placeholder="Introduzca la URL de su imagen" />
                             
                         </p>
+
                         <p>
-                            <p class="inputColor">Color:</p>
-                            <input type="color">
-                        </p>
-                        <p>
-                            Descripción del producto:<br>
-                            
-                            <textarea name="mensaje" class="introd desc"></textarea>
-                        </p>
-                        
-                        <p>
-                            Tipo de cargador: 
+                            <h6>Tipo de cargador:</h6>
                             <select name="tipocargador">
                                 <option>Ninguno</option>
                                 <option>Lighting</option>
                                 <option>USB-C</option>
                                 <option>Inalambrico</option>
                             </select>
+                        
+                        </p>
+
+                        <p class="inputColor">
+                            <h6>Color:</h6>
+                            <input  class="introdcolor" type="color">
+                        </p>
+
+                        <p>
+                            <h6>Descripción del producto:</h6>
+                            <textarea name="mensaje" class="introd desc"></textarea>
+                        </p>
+
+                        <p>
+                            <input type="checkbox" name="unlimited"> Es edición limitada
                             
+                            <h6>En caso de que si lo sea seleccione hasta que fecha se podrá comprar el producto:</h6>
+                            
+                            <input type="date" class="fecha introd" />
                         </p>
                     
                         <input type="reset" value="Reiniciar el formulario">

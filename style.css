@@ -339,10 +339,6 @@
    margin-left: 60px;
 }
 
-.bordes{
-   border-radius: 10px;
-}
-
 .desc{
    width: 95%;
 }
@@ -379,4 +375,14 @@
 .mas:hover{
    color:white;
    transition-duration: 0.2s;
+}
+
+.introd{
+   border-radius: 7px;
+}
+.precio{
+   max-width: 52px;
+}
+.inputColor{
+   margin:0px;
 }

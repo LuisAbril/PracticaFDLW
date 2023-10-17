@@ -374,6 +374,7 @@
 
 .introd{
    border-radius: 7px;
+   border: none;
 }
 .precio{
    max-width: 52px;

@@ -30,6 +30,9 @@
    grid-template-columns: [x0] 1fr [x1] 15fr [x2] 3fr [x3];
    align-items: center;
 }
+.form-control{
+   min-width: 150px;
+}
 .back{
    grid-column: x2/x3;
 }
@@ -357,17 +360,47 @@
    background: rgb(15, 9, 102);
    transition-duration: 0.25s;
 }
+.doble{
+   bottom: 80px;
+}
+
 .mas{
    position: absolute;
    color: rgb(15, 9, 102);
    font-size: 36px;
    right: -4px;
-   top:-3px;
+   top:-3.5px;
    padding: 10px;
    padding-top: 0px;
    padding-bottom: 0px;
 }
 .mas:hover{
+   color:white;
+   transition-duration: 0.2s;
+}
+
+.edit{
+   position: absolute;
+   color: rgb(15, 9, 102);
+   font-size: 25px;
+   right: -1px;
+   top: -2px;
+   padding: 8px 13px 8px 13px;  
+}
+.edit:hover{
+   color:white;
+   transition-duration: 0.2s;
+}
+
+.papelera{
+   position: absolute;
+   color: rgb(15, 9, 102);
+   font-size: 25px;
+   right: -1px;
+   top: -2px;
+   padding: 8px 13px 8px 13px;  
+}
+.papelera:hover{
    color:white;
    transition-duration: 0.2s;
 }
@@ -385,10 +418,31 @@
 .imagenform{
    width: 50%;
 }
-.comprar{
-   background-color: rgb(45, 101, 134);
+#comprar{
+   margin:auto;
+   background: rgb(15, 9, 102);
+   color:white;
    font-size: larger;
+   padding: 10px 20px 10px 20px;
    border:none;
    border-radius: 10px;
+   min-width: 150px;
+   text-align: center;
 }
-
+#comprar:hover{
+   background-color: rgb(9, 8, 83);
+   transition:.1s;
+   font-weight: 500;
+}
+.carrito{
+   padding-right: 6px;
+}
+.precioProd{
+   font-size: 40px;
+   font-family: gruppo, sans-serif;
+   font-weight: bolder;
+   margin:5px 0px 5px 10px;
+}
+.colorSample{
+   color: rgb(72, 78, 110);
+}

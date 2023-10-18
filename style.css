@@ -385,3 +385,10 @@
 .imagenform{
    width: 50%;
 }
+.comprar{
+   background-color: rgb(45, 101, 134);
+   font-size: larger;
+   border:none;
+   border-radius: 10px;
+}
+

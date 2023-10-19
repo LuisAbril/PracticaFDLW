@@ -383,9 +383,9 @@
    position: absolute;
    color: rgb(15, 9, 102);
    font-size: 25px;
-   right: -1px;
+   right: -2.5px;
    top: -2px;
-   padding: 8px 13px 8px 13px;  
+   padding: 8px 14px 8px 15px;  
 }
 .edit:hover{
    color:white;
@@ -396,9 +396,9 @@
    position: absolute;
    color: rgb(15, 9, 102);
    font-size: 25px;
-   right: -1px;
+   right: -2.5px;
    top: -2px;
-   padding: 8px 13px 8px 13px;  
+   padding: 8px 14px 8px 15px;  
 }
 .papelera:hover{
    color:white;

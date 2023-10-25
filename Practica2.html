@@ -70,8 +70,9 @@
                     </div>
                     <div class="username">Tú</div>
                     <div>
-                        <select name="valoracion" id="val">
-                            <option value="null">...</option>
+                        <form>
+                        <select name="valoracion" id="val" required>
+                            <option value="">...</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -81,10 +82,9 @@
                         <i class="bi bi-star-fill staricon"></i>
                     </div>
                     <div class="opinion">
-                        <form>
+                        
                             <textarea type="text" class="campocoment" placeholder="Introduzca su texto del comentario"></textarea>
-                        </form>
-                        <form>
+                        
                             <input type="submit" class="btpublicar" value="Publicar">
                         </form>
 

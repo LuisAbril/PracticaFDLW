@@ -28,17 +28,20 @@
 
         <div class="header"></div>
         <div class="sidebar"></div>
-        <div class="content ">
+        <div class="content">
             <h2 class="newcontent">Subida de nuevo producto</h2>
             <form class="newcontent2">
 
-                        <p>
-                            <h6>Introduzca del nombre de su producto:</h6>
-                            <input type="text" class="introd" placeholder="Nombre de su producto">
-                        </p>
+                        <div class="formulario">
+                            <div class="form-in">
+                                <input type="text" id="inNombre" required>
+                                <label for="inNombre">Nombre del producto</label>
+                            </div>
+                        </div>
                         <p>
                             <h6>Tipo de producto:</h6>
-                            <select name="tipoprod" class="introd">
+                            <select name="tipoprod" class="introd" required>
+                                <option value="">. . .</option>
                                 <option>Móvil</option>
                                 <option>Tableta</option>
                                 <option>Ordenador</option>
@@ -47,14 +50,22 @@
                                 <option>Accesorios</option>
                             </select>
                         </p>
-                        <p>
-                            <h6>¿Que precio tendrá su producto?</h6>
-                            <input class="introd precio" type="text" placeholder="Precio">€</input>
-                        </p>
+                        <div class="formulario">
+                            <div class="form-in">
+                                <input type="text" id="inPrecio" required>
+                                <label for="inPrecio">Precio</label>
+                                <p id="euros">€</p>
+                            </div>
+                        </div>
                 
                         <p>
                             <h6>Imagen del producto:</h6>
-                            <input type="text" name="imagen" class="introd imagenform" placeholder="Introduzca la URL de su imagen" />
+                            <div class="formulario">
+                                <div class="form-in">
+                                    <input type="text" id="inURL" required>
+                                    <label for="inURL">URL de la imagen</label>
+                                </div>
+                            </div>
                             
                         </p>
 

@@ -331,10 +331,12 @@
 .newcontent{
    margin:20px;
    margin-left: 20px;
+   color:rgb(5, 5, 60);
 }
 .newcontent2 {
    margin: 20px;
    margin-left: 60px;
+   color:rgb(5, 5, 60);
 }
 
 .desc{
@@ -445,4 +447,74 @@
 }
 .colorSample{
    color: rgb(72, 78, 110);
+}
+
+
+
+
+.formulario{
+   width:500px;
+   margin: 0;
+   margin-top:15px;
+   background:transparent;
+}
+.form-in{
+   position:relative;
+   margin-bottom:15px;
+}
+.form-in input{
+   display:block;
+   width:200px;
+   height:30px;
+   background: white;
+   border: solid 1px #ccc;
+   border-radius: 7px;
+   transition: all .3s ease;
+   padding: 0 15px;
+}
+.form-in input:focus{
+   border-color: blue;
+}
+.form-in label{
+   position:absolute;
+   cursor:text;
+   z-index:2;
+   top: 6px;
+   left: 0px;
+   font-size:12px;
+   font-weight: bold;
+   background: transparent;
+   padding: 0 10px;
+   color:rgb(5, 5, 60);
+   transition: all .3s ease;
+}
+.form-in input:focus + label,
+.form-in input:valid + label{
+   font-size:11px;
+   top:-17px;
+   left:-5px;
+}
+.form-in input:focus + label{
+   color:rgb(5, 5, 60);
+}
+
+#inNombre{
+   margin-top:25px;
+}
+
+#inPrecio{
+   width:80px;
+   margin-top:25px;
+}
+#euros{
+   position: relative;
+   top:-17px;
+   left:93px;
+   font-weight: 600;
+   margin:-10px;
+}
+
+#inURL{
+   margin-top:20px;
+   margin-bottom: 20px;
 }

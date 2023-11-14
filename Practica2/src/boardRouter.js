@@ -17,7 +17,7 @@ router.post('/post/new', (req, res) => {
 });
 
 router.get('/post/:id', (req, res) => {
-    let post = boardService.getProducts(req.params.id);
+    let post = boardService.getProduct(req.params.id);
     res.render('show_post', { post });
 });
 

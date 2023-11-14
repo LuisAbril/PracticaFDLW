@@ -15,7 +15,7 @@ export function deleteProduct(id) {
 export function getProducts() {
     return [...posts.values()];
 }
-export function getProducts(id) {
+export function getProduct(id) {
     return posts.get(id);
 }
 

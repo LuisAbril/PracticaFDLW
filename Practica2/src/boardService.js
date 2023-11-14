@@ -5,6 +5,11 @@ addProduct({
     tipoProd: "Movil", cargaProd: "USB-C", capProd:"128 GB", colorProd: "Titanio Azul"
 });
 
+addProduct({
+    nombreProd: "Appel Watch", precioProd: "500", imgProd: "https://thumb.pccomponentes.com/w-530-530/articles/1077/10777860/1838-apple-iphone-15-pro-256gb-titanio-azul-libre.jpg",
+    tipoProd: "Movil", cargaProd: "USB-C", capProd:"128 GB", colorProd: "Titanio Azul"
+});
+
 export function addProduct(product) {
     let id = nextId++;
     product.id = id.toString();
@@ -17,7 +22,10 @@ export function getProducts() {
     return [...productos.values()];
 }
 export function getProduct(id) {
+    console.log(id);
+    console.log(productos.get(id))
     return productos.get(id);
+
 }
 
 

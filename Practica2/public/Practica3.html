@@ -31,29 +31,29 @@
         <div class="sidebar"></div>
         <div class="content">
             <h2 class="newcontent">Subida de nuevo producto</h2>
-            <form class="newcontent2">
+            <form class="newcontent2" action="nuevoProd">
 
                         <div class="formulario">
                             <div class="form-in">
-                                <input type="text" id="inNombre" required>
+                                <input type="text" id="inNombre" required name="prodNombre">
                                 <label for="inNombre">Nombre del producto</label>
                             </div>
                         </div>
                         <p>
                             <h6>Tipo de producto:</h6>
-                            <select name="tipoprod" class="introd" required>
+                            <select name="tipoprod" class="introd" required name="prodTipo">
                                 <option value="">. . .</option>
-                                <option>Móvil</option>
-                                <option>Tableta</option>
-                                <option>Ordenador</option>
-                                <option>Reloj</option>
-                                <option>Auriculares</option>
-                                <option>Accesorios</option>
+                                <option value="movil">Móvil</option>
+                                <option value="tableta">Tableta</option>
+                                <option value="ordenador">Ordenador</option>
+                                <option value="reloj">Reloj</option>
+                                <option value="auriculares">Auriculares</option>
+                                <option value="accesorios">Accesorios</option>
                             </select>
                         </p>
                         <div class="formulario">
                             <div class="form-in">
-                                <input type="text" id="inPrecio" required>
+                                <input type="text" id="inPrecio" required name="precioProd">
                                 <label for="inPrecio">Precio</label>
                                 <p id="euros">€</p>
                             </div>
@@ -63,7 +63,7 @@
                             <h6>Imagen del producto:</h6>
                             <div class="formulario">
                                 <div class="form-in">
-                                    <input type="text" id="inURL" required>
+                                    <input type="text" id="inURL" required name="imagProd">
                                     <label for="inURL">URL de la imagen</label>
                                 </div>
                             </div>
@@ -72,36 +72,36 @@
 
                         <p>
                             <h6>Tipo de cargador:</h6>
-                            <select name="tipocargador" class="introd">
-                                <option>Ninguno</option>
-                                <option>Lighting</option>
-                                <option>USB-C</option>
-                                <option>Inalambrico</option>
+                            <select name="tipocargador" class="introd" name="cargaProd">
+                                <option value="nada">Ninguno</option>
+                                <option value="lighting">Lighting</option>
+                                <option value="usbc">USB-C</option>
+                                <option value="inalambrico">Inalambrico</option>
                             </select>
                         
                         </p>
 
                         <p>
                             <h6>Capacidad:</h6>
-                            <select name="tipocargador" class="introd">
-                                <option>No aplica</option>
-                                <option>64 GB</option>
-                                <option>128 GB</option>
-                                <option>256 GB</option>
-                                <option>512 GB</option>
-                                <option>1 TB</option>
+                            <select name="tipocargador" class="introd" name="capProd">
+                                <option value="no">No aplica</option>
+                                <option value="64">64 GB</option>
+                                <option value="128">128 GB</option>
+                                <option value="256">256 GB</option>
+                                <option value="512">512 GB</option>
+                                <option value="1T">1 TB</option>
                             </select>
                         
                         </p>
 
                         <p class="inputColor">
                             <h6>Color:</h6>
-                            <input  class="introdcolor" type="color">
+                            <input  class="introdcolor" type="color" name="colProd">
                         </p>
 
                         <p>
                             <h6>Descripción del producto:</h6>
-                            <textarea name="mensaje" class="introd desc"></textarea>
+                            <textarea name="mensaje" class="introd desc" name="descProd"></textarea>
                         </p>
 
                         <p>
@@ -146,3 +146,14 @@
 </body>
 
 </html>
+
+
+Nombre del form --> nuevoProd
+        Nombre del producto --> prodNombre
+        Tipo del producto (es un select) --> prodTipo
+        Precio del producto --> precioProd
+        Imagen del producto --> imagProd
+        Carga del producto (es un select) --> cargaProd
+        Capacidad producto (es un select) --> capProd
+        Color del producto --> colProd
+        Descripcion producto --> descProd

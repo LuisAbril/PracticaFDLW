@@ -35,13 +35,13 @@
 
                         <div class="formulario">
                             <div class="form-in">
-                                <input type="text" id="inNombre" required name="prodNombre">
+                                <input type="text" id="inNombre" required name="nombreProd">
                                 <label for="inNombre">Nombre del producto</label>
                             </div>
                         </div>
                         <p>
                             <h6>Tipo de producto:</h6>
-                            <select name="tipoprod" class="introd" required name="prodTipo">
+                            <select name="tipoprod" class="introd" required name="tipoProd">
                                 <option value="">. . .</option>
                                 <option value="movil">Móvil</option>
                                 <option value="tableta">Tableta</option>
@@ -63,7 +63,7 @@
                             <h6>Imagen del producto:</h6>
                             <div class="formulario">
                                 <div class="form-in">
-                                    <input type="text" id="inURL" required name="imagProd">
+                                    <input type="text" id="inURL" required name="imgProd">
                                     <label for="inURL">URL de la imagen</label>
                                 </div>
                             </div>
@@ -96,7 +96,7 @@
 
                         <p class="inputColor">
                             <h6>Color:</h6>
-                            <input  class="introdcolor" type="color" name="colProd">
+                            <input  class="introdcolor" type="color" name="colorProd">
                         </p>
 
                         <p>
@@ -105,11 +105,11 @@
                         </p>
 
                         <p>
-                            <input type="checkbox" name="unlimited"> Es edición limitada
+                            <input type="checkbox" name="limitedProd"> Es edición limitada
                             
                             <h6>En caso de que si lo sea seleccione hasta que fecha se podrá comprar el producto:</h6>
                             
-                            <input type="date" class="fecha introd" />
+                            <input type="date" class="fecha introd" name="fechaProd"/>
                         </p>
                     
                         <input type="reset" value="Reiniciar el formulario">
@@ -149,11 +149,14 @@
 
 
         <!--Nombre del form -> nuevoProd
-        Nombre del producto -> prodNombre
-        Tipo del producto (es un select) -> prodTipo
+        Nombre del producto -> nombreProd
+        Tipo del producto (es un select) -> tipoProd
         Precio del producto -> precioProd
-        Imagen del producto -> imagProd
+        Imagen del producto -> imgProd
         Carga del producto (es un select) -> cargaProd
         Capacidad producto (es un select) -> capProd
-        Color del producto -> colProd
-        Descripcion producto -> descProd -->
+        Color del producto -> colorProd
+        Descripcion producto -> descProd 
+        Es ed limitada -> limitedProd
+        Fecha limite -> fechaProd
+    -->

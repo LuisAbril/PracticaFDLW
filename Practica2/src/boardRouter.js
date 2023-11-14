@@ -22,9 +22,9 @@ router.post('/post/new', (req, res) => {
     res.render('saved_post');
 });
 
-router.get('/post/:id', (req, res) => {
-    let post = boardService.getProduct(req.params.id);
-    res.render('show_post', { post });
+router.get('/producto/:id', (req, res) => {
+    let producto = boardService.getProduct(req.params.id);
+    res.render('Practica2', { producto });
 });
 
 router.get('/post/:id/delete', (req, res) => {

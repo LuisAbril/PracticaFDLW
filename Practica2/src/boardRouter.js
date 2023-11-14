@@ -9,6 +9,12 @@ router.get('/', (req, res) => {
     });
 });
 
+router.get('/nuevo-producto', (req, res) => {
+    res.render('Practica3', {
+        productos: boardService.getProducts()
+    });
+});
+
 
 router.post('/post/new', (req, res) => {
     let { user, title, text } = req.body;

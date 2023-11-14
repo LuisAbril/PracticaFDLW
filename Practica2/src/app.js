@@ -11,4 +11,4 @@ app.engine('mustache', mustacheExpress());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/../public'));
 app.use('/', boardRouter);
-app.listen(3000, () => console.log('Listening on port 3000!'));
+app.listen(3001, () => console.log('Listening on port 3001!'));

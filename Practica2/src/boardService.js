@@ -1,6 +1,6 @@
 const posts = new Map();
 let nextId = 0;
-addProducts({
+addProduct({
     prodNombre: "AiPhone 15 Pro", precio: "1219", imgURL: "https://thumb.pccomponentes.com/w-530-530/articles/1077/10777860/1838-apple-iphone-15-pro-256gb-titanio-azul-libre.jpg"
 });
 

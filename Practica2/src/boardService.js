@@ -2,7 +2,7 @@ const productos = new Map();
 let nextId = 0;
 addProduct({
     nombreProd: "AiPhone 15 Pro", precioProd: "1219", imgProd: "https://thumb.pccomponentes.com/w-530-530/articles/1077/10777860/1838-apple-iphone-15-pro-256gb-titanio-azul-libre.jpg",
-    tipoProd: "Movil", cargaProd: "USB-C", capProd:"128 GB", colorProd: "Titanio Azul"
+    tipoProd: "Movil", cargaProd: "USB-C", capProd:"128 GB", colorProd: "#484E6E", nombreColor:"Titanio Azul"
 });
 
 addProduct({

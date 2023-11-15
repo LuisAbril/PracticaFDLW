@@ -18,9 +18,9 @@ router.get('/nuevo-producto', (req, res) => {
 
 router.post('/product/new', (req, res) => {
     let {nombreProd, precioProd, imgProd, 
-        tipoProd, cargaProd, capProd, colorProd} = req.body;
+        tipoProd, cargaProd, capProd, colorProd, nombreColor} = req.body;
     boardService.addProduct({ nombreProd, precioProd, imgProd, 
-        tipoProd, cargaProd, capProd, colorProd });
+        tipoProd, cargaProd, capProd, colorProd, nombreColor });
     res.render('saved_product');
 });
 

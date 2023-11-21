@@ -15,9 +15,9 @@ router.get('/nuevo-producto', (req, res) => {
 
 
 router.post('/', (req, res) => {
-    let {nombreProd, precioProd, imgProd, 
+    let {nombreProd, precioProd, imgProd, descProd,
         tipoProd, cargaProd, capProd, colorProd, nombreColor} = req.body;
-    boardService.addProduct({ nombreProd, precioProd, imgProd, 
+    boardService.addProduct({ nombreProd, precioProd, imgProd, descProd,
         tipoProd, cargaProd, capProd, colorProd, nombreColor });
     res.render('index', {
         productos: boardService.getProducts()
@@ -31,7 +31,7 @@ router.get('/producto/:id', (req, res) => {
 
 router.get('/product/:id/delete', (req, res) => {
     boardService.deleteProduct(req.params.id);
-    res.render('index',{
+    res.render('deleted_product',{
         productos: boardService.getProducts()
     });
 });

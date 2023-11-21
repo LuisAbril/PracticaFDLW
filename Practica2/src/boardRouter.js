@@ -15,9 +15,9 @@ router.get('/nuevo-producto', (req, res) => {
 
 
 router.post('/', (req, res) => {
-    let {nombreProd, precioProd, imgProd, descProd,
+    let {nombreProd, precioProd, imgProd, imgProd2, descProd,
         tipoProd, cargaProd, capProd, colorProd, nombreColor} = req.body;
-    boardService.addProduct({ nombreProd, precioProd, imgProd, descProd,
+    boardService.addProduct({ nombreProd, precioProd, imgProd, imgProd2, descProd,
         tipoProd, cargaProd, capProd, colorProd, nombreColor });
     res.render('index', {
         productos: boardService.getProducts()
@@ -28,12 +28,18 @@ router.get('/producto/:id', (req, res) => {
     let producto = boardService.getProduct(req.params.id);
     res.render('Practica2', producto);
 });
-
+//eliminacion
 router.get('/product/:id/delete', (req, res) => {
     boardService.deleteProduct(req.params.id);
     res.render('deleted_product',{
         productos: boardService.getProducts()
     });
+});
+
+//modificacion del producto en pagina modificacion
+router.get('/product/:id/edit', (req, res) => {
+    let producto = boardService.getProduct(req.params.id);
+    res.render('modificacion', producto);
 });
 
 export default router;

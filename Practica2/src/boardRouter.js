@@ -15,9 +15,9 @@ router.get('/nuevo-producto', (req, res) => {
 
 
 router.post('/', (req, res) => {
-    let {nombreProd, precioProd, imgProd, descProd,
+    let {nombreProd, precioProd, imgProd, imgProd2, descProd,
         tipoProd, cargaProd, capProd, colorProd, nombreColor} = req.body;
-    boardService.addProduct({ nombreProd, precioProd, imgProd, descProd,
+    boardService.addProduct({ nombreProd, precioProd, imgProd, imgProd2, descProd,
         tipoProd, cargaProd, capProd, colorProd, nombreColor });
     res.render('index', {
         productos: boardService.getProducts()

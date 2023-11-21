@@ -22,10 +22,7 @@ export function getProducts() {
     return [...productos.values()];
 }
 export function getProduct(id) {
-    console.log(id);
-    console.log(productos.get(id))
     return productos.get(id);
-
 }
 
 

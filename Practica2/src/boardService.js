@@ -11,6 +11,7 @@ addProduct({
 });
 
 export function addProduct(product) {
+    console.log(product);
     let id = nextId++;
     product.id = id.toString();
     productos.set(product.id, product);

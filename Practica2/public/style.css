@@ -121,9 +121,29 @@
    color: rgb(7, 7, 99);
 }
 
+.nombreProd{
+   max-width: 100%;
+   min-width:200px;
+   margin: 5px auto;
+   font-size: 40px;
+   font-weight: 600;
+   color: rgb(5, 5, 60);
+}
+
+.subtituloProd{
+   max-width: 100%;
+   min-width:200px;
+   margin: 5px auto;
+   font-size: 17px;
+   font-weight: 600;
+   color: rgb(5, 5, 60);
+}
+
 .specs {
    font-family:Arial, Helvetica, sans-serif;
    color: rgb(7, 7, 99);
+   font-size: 15px;
+   margin-left: 10px;
 }
 
 .price {
@@ -147,9 +167,10 @@
 }
 
 .subelemname{
-   max-width: 45%;
+   max-width: 100%;
    min-width:200px;
-   margin: 20px auto;
+   margin: auto;
+   font-size: 17px;
    color: rgb(5, 5, 60);
 }
 

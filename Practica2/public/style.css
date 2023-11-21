@@ -283,11 +283,11 @@
 
 @keyframes slider {
    0% {
-      left: 0;
+      left: -100%;
    }
 
    30% {
-      left: 0;
+      left: -100%;
    }
 
    33% {
@@ -295,7 +295,7 @@
    }
 
    63% {
-      left: -100%;
+      left: -200%;
    }
 
    66% {
@@ -307,7 +307,7 @@
    }
 
    100% {
-      left: 0;
+      left: -100%;
    }
 }
 
@@ -315,7 +315,7 @@
    width: 300%;
    height: 100%;
    position: relative;
-   animation: 18s slider infinite;
+   animation: 10s slider infinite;
 }
 
 #slider figure:hover {

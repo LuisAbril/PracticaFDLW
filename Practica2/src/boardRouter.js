@@ -29,9 +29,11 @@ router.get('/producto/:id', (req, res) => {
     res.render('Practica2', producto);
 });
 
-router.get('/post/:id/delete', (req, res) => {
+router.get('/product/:id/delete', (req, res) => {
     boardService.deleteProduct(req.params.id);
-    res.render('deleted_post');
+    res.render('index',{
+        productos: boardService.getProducts()
+    });
 });
 
 export default router;

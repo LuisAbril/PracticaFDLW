@@ -31,7 +31,9 @@ router.get('/producto/:id', (req, res) => {
 
 router.get('/post/:id/delete', (req, res) => {
     boardService.deleteProduct(req.params.id);
-    res.render('deleted_post');
+    res.render('index',{
+        productos: boardService.getProducts()
+    });
 });
 
 export default router;

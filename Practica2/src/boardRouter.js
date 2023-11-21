@@ -28,12 +28,18 @@ router.get('/producto/:id', (req, res) => {
     let producto = boardService.getProduct(req.params.id);
     res.render('Practica2', producto);
 });
-
+//eliminacion
 router.get('/product/:id/delete', (req, res) => {
     boardService.deleteProduct(req.params.id);
     res.render('deleted_product',{
         productos: boardService.getProducts()
     });
+});
+
+//modificacion del producto en pagina modificacion
+router.get('/product/:id/edit', (req, res) => {
+    let producto = boardService.getProduct(req.params.id);
+    res.render('modificacion', producto);
 });
 
 export default router;

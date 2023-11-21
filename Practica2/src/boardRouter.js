@@ -10,24 +10,22 @@ router.get('/', (req, res) => {
 });
 
 router.get('/nuevo-producto', (req, res) => {
-    res.render('Practica3', {
-        productos: boardService.getProducts()
-    });
+    res.render('Practica3');
 });
 
 
-router.post('/product/new', (req, res) => {
+router.post('/', (req, res) => {
     let {nombreProd, precioProd, imgProd, 
         tipoProd, cargaProd, capProd, colorProd, nombreColor} = req.body;
     boardService.addProduct({ nombreProd, precioProd, imgProd, 
         tipoProd, cargaProd, capProd, colorProd, nombreColor });
-    res.render('saved_product');
+    res.render('index', {
+        productos: boardService.getProducts()
+    });
 });
 
 router.get('/producto/:id', (req, res) => {
-    console.log(req.params);
     let producto = boardService.getProduct(req.params.id);
-    console.log(producto);
     res.render('Practica2', producto);
 });
 

@@ -41,5 +41,15 @@ router.get('/product/:id/edit', (req, res) => {
     let producto = boardService.getProduct(req.params.id);
     res.render('modificacion', producto);
 });
-
+router.post('/formedit', (req, res) => {
+    let { nombreProd, precioProd, imgProd, imgProd2, descProd,
+        tipoProd, cargaProd, capProd, colorProd, nombreColor } = req.body;
+    boardService.addProduct({
+        nombreProd, precioProd, imgProd, imgProd2, descProd,
+        tipoProd, cargaProd, capProd, colorProd, nombreColor
+    });
+    res.render('index', {
+        productos: boardService.getProducts()
+    });
+});
 export default router;

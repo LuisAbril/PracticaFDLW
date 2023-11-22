@@ -29,9 +29,7 @@ router.get('/producto/:id', (req, res) => {
 //eliminacion
 router.get('/product/:id/delete', (req, res) => {
     boardService.deleteProduct(req.params.id);
-    res.render('deleted_product',{
-        productos: boardService.getProducts()
-    });
+    res.redirect("/");
 });
 
 //modificacion del producto en pagina modificacion

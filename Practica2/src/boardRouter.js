@@ -19,9 +19,7 @@ router.post('/', (req, res) => {
         tipoProd, cargaProd, capProd, colorProd, nombreColor} = req.body;
     boardService.addProduct({ nombreProd, precioProd, imgProd, imgProd2, descProd,
         tipoProd, cargaProd, capProd, colorProd, nombreColor });
-    res.render('index', {
-        productos: boardService.getProducts()
-    });
+    res.redirect("/");
 });
 
 router.get('/producto/:id', (req, res) => {

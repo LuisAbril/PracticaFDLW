@@ -36,6 +36,8 @@ router.get('/product/:id/delete', (req, res) => {
 //lleva a modifcicacion
 router.get('/product/:id/edit', (req, res) => {
     let producto = boardService.getProduct(req.params.id);
+    let Movil = (producto.tipoProd=="Movil");
+    producto = {producto, Movil};
     res.render('modificacion', producto);
 });
 

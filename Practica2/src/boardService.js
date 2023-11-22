@@ -18,6 +18,10 @@ export function addProduct(product) {
 export function deleteProduct(id) {
     productos.delete(id);
 }
+export function editProduct(id, product) {
+    product.id=id.toString();
+    productos.set(product.id, product);
+}
 export function getProducts() {
     return [...productos.values()];
 }

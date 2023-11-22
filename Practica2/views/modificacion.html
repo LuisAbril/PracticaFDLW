@@ -31,7 +31,7 @@
         <div class="sidebar"></div>
         <div class="content">
             <h2 class="newcontent">Modificacion de producto</h2>
-            <form class="newcontent2" action="/formedit" method="post">
+            <form class="newcontent2" action="/formedit/{{id}}" method="post">
 
                         <div class="formulario">
                             <div class="form-in">
@@ -43,7 +43,7 @@
                             <h6>Tipo de producto:</h6>
                             <select class="introd" required name="tipoProd">
                                 <option value="">. . .</option>
-                                <option value="Movil">Móvil</option>
+                                <option value="Movil" {{#Movil}}selected{{/Movil}}>Móvil</option>
                                 <option value="Tableta">Tableta</option>
                                 <option value="Ordenador">Ordenador</option>
                                 <option value="Reloj">Reloj</option>

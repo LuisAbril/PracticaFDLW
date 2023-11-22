@@ -34,11 +34,12 @@ router.get('/product/:id/delete', (req, res) => {
 
 //modificacion del producto en pagina modificacion
 //lleva a modifcicacion
-router.get('/product/:id/edit', (req, res) => {
+router.get('/product/edit/:id', (req, res) => {
+    let id = req.params.id;
     let producto = boardService.getProduct(req.params.id);
     let Movil = (producto.tipoProd=="Movil");
-    producto = {producto, Movil};
-    res.render('modificacion', producto);
+    let productoTotal = {producto, Movil, id};
+    res.render('modificacion', productoTotal);
 });
 
 //borra producto y crea uno nuevo

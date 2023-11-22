@@ -37,8 +37,33 @@ router.get('/product/:id/delete', (req, res) => {
 router.get('/product/edit/:id', (req, res) => {
     let id = req.params.id;
     let producto = boardService.getProduct(req.params.id);
-    let Movil = (producto.tipoProd=="Movil");
-    let productoTotal = {producto, Movil, id};
+    let productoTotal;
+    switch (producto.tipoProd){
+        case "Movil":
+            let Movil = true;
+            productoTotal = {producto, Movil};
+        break
+        case "Tableta":
+            let Tableta = true;
+            productoTotal = {producto, Tableta};
+        break
+        case "Ordenador":
+            let Ordenador = true;
+            productoTotal = {producto, Ordenador};
+        break
+        case "Reloj":
+            let Reloj = true;
+            productoTotal = {producto, Reloj};
+        break
+        case "Auriculares":
+            let Auriculares = true;
+            productoTotal = {producto, Auriculares};
+        break
+        case "Accesorios":
+            let Accesorios = true;
+            productoTotal = {producto, Accesorios};
+        break
+    }
     res.render('modificacion', productoTotal);
 });
 

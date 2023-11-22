@@ -33,10 +33,12 @@ router.get('/product/:id/delete', (req, res) => {
 });
 
 //modificacion del producto en pagina modificacion
+//lleva a modifcicacion
 router.get('/product/:id/edit', (req, res) => {
     let producto = boardService.getProduct(req.params.id);
     res.render('modificacion', producto);
 });
+//borra producto y crea uno nuevo
 router.post('/formedit', (req, res) => {
     let { nombreProd, precioProd, imgProd, imgProd2, descProd,
         tipoProd, cargaProd, capProd, colorProd, nombreColor } = req.body;

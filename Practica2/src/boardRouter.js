@@ -63,8 +63,11 @@ router.get('/product/edit/:id', (req, res) => {
             let Accesorios = true;
             productoTotal = {producto, Accesorios};
         break
+        default: productoTotal=producto;
     }
-    res.render('modificacion', productoTotal);
+    let productoFinal = {productoTotal, id};
+    
+    res.render('modificacion', productoFinal);
 });
 
 //borra producto y crea uno nuevo

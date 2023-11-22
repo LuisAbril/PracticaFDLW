@@ -35,7 +35,7 @@
 
                         <div class="formulario">
                             <div class="form-in">
-                                <input type="text" id="inNombre" value="{{nombreProd}}"required name="nombreProd">
+                                <input type="text" id="inNombre" value="{{productoTotal.producto.nombreProd}}"required name="nombreProd">
                                 <label for="inNombre">Nombre del producto</label>
                             </div>
                         </div>
@@ -43,17 +43,17 @@
                             <h6>Tipo de producto:</h6>
                             <select class="introd" required name="tipoProd">
                                 <option value="">. . .</option>
-                                <option value="Movil" {{#Movil}}selected{{/Movil}}>Móvil</option>
-                                <option value="Tableta" {{#Tableta}}selected{{/Tableta}}>Tableta</option>
-                                <option value="Ordenador" {{#Ordenador}}selected{{/Ordenador}}>Ordenador</option>
-                                <option value="Reloj" {{#Reloj}}selected{{/Reloj}}>Reloj</option>
-                                <option value="Auriculares" {{#Auriculares}}selected{{/Auriculares}}>Auriculares</option>
-                                <option value="Accesorios" {{#Accesorios}}selected{{/Accesorios}}>Accesorios</option>
+                                <option value="Movil" {{#productoTotal.Movil}}selected{{/productoTotal.Movil}}>Móvil</option>
+                                <option value="Tableta" {{#productoTotal.Tableta}}selected{{/productoTotal.Tableta}}>Tableta</option>
+                                <option value="Ordenador" {{#productoTotal.Ordenador}}selected{{/productoTotal.Ordenador}}>Ordenador</option>
+                                <option value="Reloj" {{#productoTotal.Reloj}}selected{{/productoTotal.Reloj}}>Reloj</option>
+                                <option value="Auriculares" {{#productoTotal.Auriculares}}selected{{/productoTotal.Auriculares}}>Auriculares</option>
+                                <option value="Accesorios" {{#productoTotal.Accesorios}}selected{{/productoTotal.Accesorios}}>Accesorios</option>
                             </select>
                         </p>
                         <div class="formulario">
                             <div class="form-in">
-                                <input type="text" id="inPrecio" value="{{precioProd}}"required name="precioProd">
+                                <input type="text" id="inPrecio" value="{{productoTotal.producto.precioProd}}"required name="precioProd">
                                 <label for="inPrecio">Precio</label>
                                 <p id="euros">€</p>
                             </div>
@@ -63,13 +63,13 @@
                             <h6>Imagenes del producto:</h6>
                             <div class="formulario">
                                 <div class="form-in">
-                                    <input type="text" id="inURL" value="{{imgProd}}"required name="imgProd">
+                                    <input type="text" id="inURL" value="{{productoTotal.producto.imgProd}}"required name="imgProd">
                                     <label for="inURL">URL de la imagen 1</label>
                                 </div>
                             </div>
                             <div class="formulario">
                                 <div class="form-in">
-                                    <input type="text" id="inURL" value="{{imgProd2}}"required name="imgProd2">
+                                    <input type="text" id="inURL" value="{{productoTotal.producto.imgProd2}}"required name="imgProd2">
                                     <label for="inURL">URL de la imagen 2</label>
                                 </div>
                             </div>
@@ -102,14 +102,14 @@
 
                         <div class="inputColor">
                             <h6>Color:</h6>
-                            <input  class="introdcolor" type="color" value="{{colorProd}}"name="colorProd">
+                            <input  class="introdcolor" type="color" value="{{productoTotal.producto.colorProd}}"name="colorProd">
                             <h6>Nombre del color:</h6>
-                            <input  class="introd" type="text" value="{{nombreColor}}"name="nombreColor">
+                            <input  class="introd" type="text" value="{{productoTotal.producto.nombreColor}}"name="nombreColor">
                         </div>
 
                         <p>
                             <h6>Descripción del producto:</h6>
-                            <textarea type="input" class="introd desc"name="descProd">{{descProd}}</textarea>
+                            <textarea type="input" class="introd desc" name="descProd">{{productoTotal.producto.descProd}}</textarea>
                         </p>
 
                         <p>

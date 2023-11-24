@@ -17,6 +17,26 @@ addProduct({
     tipoProd: "Auriculares", cargaProd: "USB-C", capProd: "No Aplica", colorProd: "#FFFFFF", nombreColor: "Blanco", descProd: "\n- APPEL AirPuds (2022 3ª gen)  \n- Inalámbricos \n- Bluetooth®\n- Estuche Carga no Inalámbrica\n- Chip H1\n- Siri\n- Blanco"
 });
 
+addProduct({
+    nombreProd: "Funda Aiphone 12", precioProd: "33,00", imgProd: "https://www.backmarket.es/cdn-cgi/image/format%3Dauto%2Cquality%3D75%2Cwidth%3D828/https://d2e6ccujb3mkqf.cloudfront.net/3dff6202-8b26-4e90-929d-d93d7e62809f-1_d79b1281-d2c3-445a-b9d3-beb2662b0bdf.jpg", imgProd2: "https://www.backmarket.es/cdn-cgi/image/format%3Dauto%2Cquality%3D75%2Cwidth%3D828/https://d2e6ccujb3mkqf.cloudfront.net/3dff6202-8b26-4e90-929d-d93d7e62809f-2_2a092461-148e-4fd4-b472-4398258a60b1.jpg",
+    tipoProd: "Accesorios", cargaProd: "Ninguno", capProd: "No Aplica", colorProd: "#0E75CF", nombreColor: "Azul", descProd: "\n- Funda Appel AiPhone 12 \n- MagSafe \n- Silicona \n- Azul"
+})
+
+addProduct({
+    nombreProd: "AiPad Mini", precioProd: "463,00", imgProd: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/ipad-mini-digitalmat-gallery-1-202111?wid=730&hei=666&fmt=png-alpha&.v=1635183174000", imgProd2: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/ipad-mini-digitalmat-gallery-1-202111?wid=730&hei=666&fmt=png-alpha&.v=1635183174000",
+    tipoProd: "Tableta", cargaProd: "Lightning", capProd: "264 GB", colorProd: "1BB678", nombreColor: ""
+})
+
+addProduct({
+    nombreProd: "AiPhone EseE", precioProd: "529,00", imgProd: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphonese-digitalmat-gallery-1-202203_GEO_EMEA?wid=728&hei=666&fmt=png-alpha&.v=1645574660944", imgProd2: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphonese-digitalmat-gallery-1-202203_GEO_EMEA?wid=728&hei=666&fmt=png-alpha&.v=1645574660944",
+    tipoProd: "Movil", cargaProd: "Lightning", capProd: "64 GB", colorProd: "#000000", nombreColor: "Negro", descProd: "Pequeño"
+})
+
+addProduct({
+    nombreProd: "MacBuk Er", precioProd: "33,00", imgProd: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mba-digitalmat-gallery-4-202111_GEO_ES?wid=728&hei=666&fmt=png-alpha&.v=1665173234808", imgProd2: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mba-digitalmat-gallery-4-202111_GEO_ES?wid=728&hei=666&fmt=png-alpha&.v=1665173234808",
+    tipoProd: "Ordenador", cargaProd: "1 T", capProd: "USB-C", colorProd: "#8F989C", nombreColor: "Gris", descProd: "Potente"
+})
+
 export function addProduct(product) {
     let id = nextId++;
     product.id = id.toString();

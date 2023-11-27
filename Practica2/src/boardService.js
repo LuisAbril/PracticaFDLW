@@ -23,19 +23,38 @@ addProduct({
 })
 
 addProduct({
-    nombreProd: "AiPad Mini", precioProd: "463,00", imgProd: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/ipad-mini-digitalmat-gallery-1-202111?wid=730&hei=666&fmt=png-alpha&.v=1635183174000", imgProd2: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/ipad-mini-digitalmat-gallery-1-202111?wid=730&hei=666&fmt=png-alpha&.v=1635183174000",
-    tipoProd: "Tableta", cargaProd: "Lightning", capProd: "264 GB", colorProd: "1BB678", nombreColor: ""
+    nombreProd: "AiPad Mini", precioProd: "463,00", imgProd: "https://cf4.certideal.com/29979-prod_large/ipad-mini-2019-5a-generation-64-go-plata-wifi-4g.jpg", imgProd2:"https://cf6.certideal.com/29978-thickbox_default/ipad-mini-2019-5a-generation-64-go-plata-wifi-4g.jpg",
+    tipoProd: "Tableta", cargaProd: "Lightning", capProd: "64 GB", colorProd: "#B0B0B0", nombreColor: "Plata", descProd: "\n- Appel AiPad Mini (2019) \n- 64 GB \n- Plata \n- Wifi + 4G \n- 7,9 pulgadas \n- 2048 x 1536 píxeles \n- 300,5 g"
 })
 
 addProduct({
-    nombreProd: "AiPhone EseE", precioProd: "529,00", imgProd: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphonese-digitalmat-gallery-1-202203_GEO_EMEA?wid=728&hei=666&fmt=png-alpha&.v=1645574660944", imgProd2: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphonese-digitalmat-gallery-1-202203_GEO_EMEA?wid=728&hei=666&fmt=png-alpha&.v=1645574660944",
-    tipoProd: "Movil", cargaProd: "Lightning", capProd: "64 GB", colorProd: "#000000", nombreColor: "Negro", descProd: "Pequeño"
+    nombreProd: "AiPhone EseE", precioProd: "529,00", imgProd: "https://cf4.certideal.com/22351-prod_large/iphone-se-2020-64-gb-rojo.jpg", imgProd2:"https://cf4.certideal.com/22349-prod_large/iphone-se-2020-64-gb-rojo.jpg",
+    tipoProd: "Movil", cargaProd: "Lightning", capProd: "64 GB", colorProd: "#FF0000", nombreColor: "Rojo", descProd: "\n- Appel AiPhone EseE (2020) \n- 64 GB \n- Rojo \n- 4,7 pulgadas \n- 1334 x 750 píxeles \n- 148 g"
 })
 
 addProduct({
-    nombreProd: "MacBuk Er", precioProd: "33,00", imgProd: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mba-digitalmat-gallery-4-202111_GEO_ES?wid=728&hei=666&fmt=png-alpha&.v=1665173234808", imgProd2: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mba-digitalmat-gallery-4-202111_GEO_ES?wid=728&hei=666&fmt=png-alpha&.v=1665173234808",
-    tipoProd: "Ordenador", cargaProd: "1 T", capProd: "USB-C", colorProd: "#8F989C", nombreColor: "Gris", descProd: "Potente"
+    nombreProd: "MacBuk Er", precioProd: "33,00", imgProd: "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_83551463?x=960&y=720&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=960&ey=720&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=960&cdy=720", imgProd2:"https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_79165943?x=960&y=720&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=960&ey=720&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=960&cdy=720",
+    tipoProd: "Ordenador", cargaProd: "USB-C", capProd: "1 T", colorProd: "#A8B3B8", nombreColor: "Gris Espacial", descProd:"\n- Appel MacBuk Er (2020) \n- 1 T \n- Gris Espacial \n- 13,3 pulgadas \n- 2560 x 1600 píxeles \n- 1,29 kg"
 })
+
+addProduct({
+    nombreProd: "Appel TV 4k", precioProd: "129,00", imgProd: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/apple-tv-4k-hero-select-202210?wid=1076&hei=1070&fmt=jpeg&qlt=90&.v=1664896361408", imgProd2:"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/apple-tv-4k-hero-select-202210?wid=1076&hei=1070&fmt=jpeg&qlt=90&.v=1664896361408",
+    tipoProd: "Accesorios", cargaProd: "USB-C", capProd: "No Aplica", colorProd: "#8F989C", nombreColor: "Gris", descProd:"\n- Appel TV 4k \n- Buena capacidad de conexion \n- Gris \n- 4K"
+})
+
+addProduct({
+    nombreProd: "Houm Pod", precioProd: "299,00", imgProd: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/homepod-select-202210?wid=1080&hei=1080&fmt=jpeg&qlt=90&.v=1670557209908", imgProd2: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/homepod-select-202210?wid=1080&hei=1080&fmt=jpeg&qlt=90&.v=1670557209908",
+    tipoProd: "Accesorios", cargaProd: "Inalambrico", capProd: "No Aplica", colorProd: "#8F989C", nombreColor: "Gris", descProd: "Potente"
+})
+addProduct({
+    nombreProd: "Loyitek Circle View", precioProd: "199,00", imgProd: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/HPGS2?wid=532&hei=582&fmt=png-alpha&.v=1659482179950", imgProd2: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/HPGS2?wid=532&hei=582&fmt=png-alpha&.v=1659482179950",
+    tipoProd: "Accesorios", cargaProd: "Ninguno", capProd: "No Aplica", colorProd: "#8F989C", nombreColor: "Gris", descProd: "Potente"
+})
+addProduct({
+    nombreProd: "Appel Pencil", precioProd: "149,00", imgProd: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/apple-pencil-2-splitter-202210?wid=560&hei=528&fmt=p-jpg&qlt=95&.v=1664466559350", imgProd2: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/apple-pencil-2-splitter-202210?wid=560&hei=528&fmt=p-jpg&qlt=95&.v=1664466559350",
+    tipoProd: "Accesorios", cargaProd: "USB-C", capProd: "No Aplica", colorProd: "#8F989C", nombreColor: "Gris", descProd: "Potente"
+})
+
 
 export function addProduct(product) {
     let id = nextId++;

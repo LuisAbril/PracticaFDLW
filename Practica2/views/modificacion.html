@@ -76,10 +76,9 @@
                         <p>
                             <h6>Tipo de cargador:</h6>
                             <select class="introd" name="cargaProd">
-                                <option value="Ninguno">Ninguno</option>
-                                <option value="Lighting">Lighting</option>
-                                <option value="USB-C">USB-C</option>
-                                <option value="Inalambrico">Inalambrico</option>
+                                {{#carga}}
+                                <option value="{{CargaN}}" {{#selected}}selected{{/selected}}>{{CargaN}}</option>
+                                {{/carga}}
                             </select>
                         
                         </p>
@@ -87,12 +86,9 @@
                         <p>
                             <h6>Capacidad:</h6>
                             <select class="introd" name="capProd">
-                                <option value="No aplica">No aplica</option>
-                                <option value="64 GB">64 GB</option>
-                                <option value="128 GB">128 GB</option>
-                                <option value="256 GB">256 GB</option>
-                                <option value="512 GB">512 GB</option>
-                                <option value="1 TB">1 TB</option>
+                                {{#cap}}
+                                <option value="{{CapN}}" {{#selected}}selected{{/selected}}>{{CapN}}</option>
+                                {{/cap}}
                             </select>
                         
                         </p>

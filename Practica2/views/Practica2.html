@@ -76,18 +76,14 @@
 
                     </div>
                 </div>
+                {{#comments}}
                 <div class="coment">
                     <div class="pfp"><img class="pic" src="https://lh3.googleusercontent.com/-lxo_m9RwUnI/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3reOuRxTtgJ9Th2LrdZgEnIb9o9g7w/mo/photo.jpg"></div>
-                    <div class="username">Marcos Garcia</div>
-                    <div class="estrellas">3/5 <i class="bi bi-star-fill staricon"></i></div>
-                    <div class="opinion">Es como fuack no puedo durar mucho aqui sabes</div>  
+                    <div class="username">{{username}}</div>
+                    <div class="estrellas">{{punt}}/5 <i class="bi bi-star-fill staricon"></i></div>
+                    <div class="opinion">{{commentText}}</div>  
                 </div>
-                <div class="coment">
-                    <div class="pfp"><img class="pic" src="https://lh4.googleusercontent.com/-XT1k0WYVK-M/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3re7LDo7k4rDhil0MMtdugRzoqZb0Q/photo.jpg"></div>
-                    <div class="username">Luis Abril</div>
-                    <div class="estrellas">4/5 <i class="bi bi-star-fill staricon"></i></div>
-                    <div class="opinion">El tamaño importa</div>
-                </div>
+                {{/comments}}
             </div>
         </div>
             <div class="sidebar"></div>

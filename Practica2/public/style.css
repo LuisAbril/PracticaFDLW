@@ -344,11 +344,13 @@
 #val{
    margin:10px;
    margin-right:0px;
+   border-radius: 5px;
 }
 
 .campocoment{
    width: 97%;
    height: auto;
+   border-radius: 5px;
 }
 
 .btpublicar{

@@ -456,7 +456,7 @@
    padding: 10px 20px 10px 20px;
    border:none;
    border-radius: 10px;
-   min-width: 150px;
+   min-width: 160px;
    text-align: center;
 }
 #comprar:hover{
@@ -545,9 +545,28 @@
 #inURL{
    margin-top:20px;
    margin-bottom: 20px;
+   width: 100%;
 }
 
 #inURL2{
    margin-top:20px;
    margin-bottom: 20px;
+   width: 100%;
+}
+
+#sub{
+   margin:auto;
+   background: rgb(0, 88, 139);
+   color:white;
+   font-size: normal;
+   padding: 10px 20px 10px 20px;
+   border:none;
+   border-radius: 10px;
+   min-width: 200px;
+   text-align: center;
+}
+#sub:hover{
+   background-color: rgb(15, 9, 102);
+   transition:.1s;
+   font-weight: 500;
 }

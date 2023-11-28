@@ -17,8 +17,11 @@ router.get('/nuevo-producto', (req, res) => {
 router.post('/', (req, res) => {
     let {nombreProd, precioProd, imgProd, imgProd2, descProd,
         tipoProd, cargaProd, capProd, colorProd, nombreColor} = req.body;
+     
+    let tipo=[{ProdN: "Movil", selected: tipoProd=="Movil"}, {ProdN: "Tableta", selected: tipoProd=="Tableta"},{ProdN: "Ordenador", selected: tipoProd=="Ordenador"}, {ProdN: "Reloj", selected: tipoProd=="Reloj"}, {ProdN: "Auriculares", selected: tipoProd=="Auriculares"}, {ProdN: "Accesorios", selected: tipoProd=="Accesorios"}];    
+
     boardService.addProduct({ nombreProd, precioProd, imgProd, imgProd2, descProd,
-        tipoProd, cargaProd, capProd, colorProd, nombreColor });
+        tipoProd, tipo, cargaProd, capProd, colorProd, nombreColor });
     res.redirect("/");
 });
 
@@ -35,48 +38,20 @@ router.get('/product/:id/delete', (req, res) => {
 //modificacion del producto en pagina modificacion
 //lleva a modifcicacion
 router.get('/product/edit/:id', (req, res) => {
-    let id = req.params.id;
     let producto = boardService.getProduct(req.params.id);
-    let productoTotal;
-    switch (producto.tipoProd){
-        case "Movil":
-            let Movil = true;
-            productoTotal = {producto, Movil};
-        break
-        case "Tableta":
-            let Tableta = true;
-            productoTotal = {producto, Tableta};
-        break
-        case "Ordenador":
-            let Ordenador = true;
-            productoTotal = {producto, Ordenador};
-        break
-        case "Reloj":
-            let Reloj = true;
-            productoTotal = {producto, Reloj};
-        break
-        case "Auriculares":
-            let Auriculares = true;
-            productoTotal = {producto, Auriculares};
-        break
-        case "Accesorios":
-            let Accesorios = true;
-            productoTotal = {producto, Accesorios};
-        break
-        default: productoTotal=producto;
-    }
-    let productoFinal = {productoTotal, id};
-    
-    res.render('modificacion', productoFinal);
+    res.render('modificacion', producto);
 });
 
 //borra producto y crea uno nuevo
 router.post('/formedit/:id', (req, res) => {
     let { nombreProd, precioProd, imgProd, imgProd2, descProd,
         tipoProd, cargaProd, capProd, colorProd, nombreColor } = req.body;
+
+    let tipo=[{ProdN: "Movil", selected: tipoProd=="Movil"}, {ProdN: "Tableta", selected: tipoProd=="Tableta"},{ProdN: "Ordenador", selected: tipoProd=="Ordenador"}, {ProdN: "Reloj", selected: tipoProd=="Reloj"}, {ProdN: "Auriculares", selected: tipoProd=="Auriculares"}, {ProdN: "Accesorios", selected: tipoProd=="Accesorios"}];    
+
     boardService.editProduct(req.params.id, {
         nombreProd, precioProd, imgProd, imgProd2, descProd,
-        tipoProd, cargaProd, capProd, colorProd, nombreColor
+        tipoProd, tipo, cargaProd, capProd, colorProd, nombreColor
     });
     res.redirect("/");
 });

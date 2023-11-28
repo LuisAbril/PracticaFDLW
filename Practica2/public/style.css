@@ -163,14 +163,16 @@
 .subelemimg{
    max-width: 40%;
    min-width: 400px;
-   margin: 20px auto;
+   margin-left: 10%;
+   margin-right: 15%;
+   margin-top: 40px;
 }
 
 .subelemname{
    max-width: 100%;
    min-width:200px;
-   margin: auto;
    font-size: 17px;
+   margin-top: 30px;
    color: rgb(5, 5, 60);
 }
 
@@ -178,7 +180,7 @@
    display: flex;
    flex-wrap: wrap;
    flex-direction: row;
-   justify-content: center;
+   justify-content: left;
    background: rgb(131, 183, 209);
    margin-top: 10px;
    margin-bottom: 10px;

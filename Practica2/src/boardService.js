@@ -1,6 +1,7 @@
 const productos = new Map();
 let nextId = 0;
-
+const comments = new Map();
+let nextIdComment = 0;
 //crear varios productos diferentes con el siguiente formato:
 addProduct({
     nombreProd: "AiPhone 15 Pro", precioProd: "1219,00", imgProd: "https://thumb.pccomponentes.com/w-530-530/articles/1077/10777860/1838-apple-iphone-15-pro-256gb-titanio-azul-libre.jpg", imgProd2: "https://thumb.pccomponentes.com/w-530-530/articles/1077/10777860/3456-apple-iphone-15-pro-256gb-titanio-azul-libre-mejor-precio.jpg",
@@ -87,6 +88,10 @@ addProduct({
     tipo: [{ProdN: "Movil", selected: false}, {ProdN: "Tableta", selected: false},{ProdN: "Ordenador", selected: false}, {ProdN: "Reloj", selected: false}, {ProdN: "Auriculares", selected: false}, {ProdN: "Accesorios", selected: true}],
     carga: [{ CargaN: "Ninguno", selected: false }, { CargaN: "Lighting", selected: false }, { CargaN: "USB-C", selected: true }, { CargaN: "Inalambrico", selected: false }],
     cap: [{ CapN: "No aplica", selected: true }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: false }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }]
+})
+
+addComment({
+    username: "Yaume", firstL:"Y", commentText:"Salchipapas", punt:"3" ,r:"200" ,g:"5" ,b:"0"
 })
 
 

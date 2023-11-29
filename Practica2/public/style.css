@@ -440,6 +440,7 @@
 .introd{
    border-radius: 7px;
    border: none;
+   padding-left: 10px;
 }
 .precio{
    max-width: 52px;
@@ -533,13 +534,13 @@
 }
 
 #inPrecio{
-   width:80px;
+   width:90px;
    margin-top:25px;
 }
 #euros{
    position: relative;
    top:-17px;
-   left:93px;
+   left:103px;
    font-weight: 600;
    margin:-10px;
 }

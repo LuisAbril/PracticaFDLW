@@ -113,5 +113,10 @@ export function getProducts() {
 export function getProduct(id) {
     return productos.get(id);
 }
+export function addComment(comment) {
+    let id = nextIdComment++;
+    comment.id=id.toString();
+    comments.set(comment.id, comment);
+}
 
 

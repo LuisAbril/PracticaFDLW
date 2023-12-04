@@ -95,6 +95,7 @@ addComment({
 })
 
 
+
 export function addProduct(product) {
     let id = nextId++;
     product.id = id.toString();

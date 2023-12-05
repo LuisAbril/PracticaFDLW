@@ -11,7 +11,7 @@ addProduct({
     tipo: [{ProdN: "Movil", selected: true}, {ProdN: "Tableta", selected: false},{ProdN: "Ordenador", selected: false}, {ProdN: "Reloj", selected: false}, {ProdN: "Auriculares", selected: false}, {ProdN: "Accesorios", selected: false}],
     carga: [{ CargaN: "Ninguno", selected: false }, { CargaN: "Lighting", selected: false }, { CargaN: "USB-C", selected: true }, { CargaN: "Inalambrico", selected: false }],
     cap: [{ CapN: "No aplica", selected: false }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: true }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }],
-    comments, nextIdComment: 3
+    comments: comments , nextIdComment: 3
 });
 
 addProduct({

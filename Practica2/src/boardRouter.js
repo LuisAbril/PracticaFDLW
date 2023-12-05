@@ -29,6 +29,7 @@ router.post('/', (req, res) => {
 
 router.get('/producto/:id', (req, res) => {
     let producto = boardService.getProduct(req.params.id);
+    console.log(producto);
     res.render('Practica2', producto);
 });
 
@@ -63,6 +64,8 @@ router.post('/formedit/:id', (req, res) => {
 
 //subir comentario
 router.post('/producto/:id', (req, res) => {
+    let id = req.params.id;
+    console.log(id);
     let producto = boardService.getProduct(req.params.id);
     console.log(producto);
     let {username, commentText, punt}= req.body
@@ -73,6 +76,7 @@ router.post('/producto/:id', (req, res) => {
     let comment = {username, firstL, commentText, punt, r, g, b};
     console.log(comment);
     boardService.addComment(producto, comment);
+    res.redirect('/producto/'+id)
 });
 
 export default router;

@@ -56,7 +56,7 @@
                             src="https://lh4.googleusercontent.com/-ZsdGLrjnEXc/AAAAAAAAAAI/AAAAAAAAAAA/AKF05nBzbwJWlR51UKQIC_ALX_Rs51ExlA/photo.jpg">
                     </div>
                     <div class="bloque">
-                        <form class="bloque2" action="/producto/:id" method="post">
+                        <form class="bloque2" action="/producto/{{id}}" method="post">
                             <div class="usernamediv"><input type="text" class="username" name="username" placeholder="Nombre de usuario"></div>
                             <div class="punt">
                                 <select name="punt" id="val" required>
@@ -77,14 +77,14 @@
                         </form>
                     </div>
                 </div>
-                {{#producto.comments}}
+                {{#poducto.comments}}
                 <div class="coment">
                     <div class="pfp" style="background: rgb({{r}},{{g}},{{b}});">{{firstL}}</div>
                     <div class="username">{{username}}</div>
                     <div class="estrellas">{{punt}}/5 <i class="bi bi-star-fill staricon"></i></div>
                     <div class="opinion">{{commentText}}</div>  
                 </div>
-                {{/producto.comments}}
+                {{/poducto.comments}}
             </div>
         </div>
             <div class="sidebar"></div>

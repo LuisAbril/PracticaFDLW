@@ -32,10 +32,15 @@
         <div class="content">
             <h2 class="newcontent">Subida de nuevo producto</h2>
             <form class="newcontent2" action="/" method="post">
-
+                        {{#error}}
+                        <div class="error">
+                            <p class="errortitle">ERROR!</p>
+                            <p class="errormsg">Asegurese de rellenar los campos obligatorios</p>
+                        </div>
+                        {{/error}}
                         <div class="formulario">
                             <div class="form-in">
-                                <input type="text" id="inNombre" required name="nombreProd">
+                                <input type="text" id="inNombre" name="nombreProd">
                                 <label for="inNombre">Nombre del producto</label>
                             </div>
                         </div>

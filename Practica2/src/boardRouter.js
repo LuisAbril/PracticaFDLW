@@ -10,7 +10,8 @@ router.get('/', (req, res) => {
 });
 
 router.get('/nuevo-producto', (req, res) => {
-    res.render('Practica3');
+    let error=req.query.error;
+    res.render('Practica3', {error});
 });
 
 
@@ -23,9 +24,14 @@ router.post('/', (req, res) => {
     let cap=[{CapN: "No aplica", selected: capProd=="No aplica"}, {CapN: "64 GB", selected: capProd=="64 GB"},{CapN: "128 GB", selected: capProd=="128 GB"}, {CapN: "256 GB", selected: capProd=="256 GB"}, {CapN: "512 GB", selected: capProd=="512 GB"}, {CapN: "1 TB", selected: capProd=="1 TB"}];
     let comments = new Map();
     let nextIdComment = 0;
-    boardService.addProduct({ nombreProd, precioProd, imgProd, imgProd2, descProd,
-        tipoProd, tipo, cargaProd, carga, capProd, cap, colorProd, nombreColor, comments, nextIdComment });
-    res.redirect("/");
+
+    if (!nombreProd || !precioProd || !imgProd || !imgProd2 || !tipoProd) {
+        res.redirect('/nuevo-producto?error=true');
+    } else {
+        boardService.addProduct({ nombreProd, precioProd, imgProd, imgProd2, descProd,
+            tipoProd, tipo, cargaProd, carga, capProd, cap, colorProd, nombreColor, comments, nextIdComment });
+        res.redirect("/");
+    }
 });
 
 router.get('/producto/:id', (req, res) => {

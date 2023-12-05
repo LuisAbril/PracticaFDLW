@@ -29,8 +29,8 @@ router.post('/', (req, res) => {
 
 router.get('/producto/:id', (req, res) => {
     let producto = boardService.getProduct(req.params.id);
-    console.log(producto);
-    res.render('Practica2', producto);
+    let comments = boardService.getComments(producto);
+    res.render('Practica2', {producto,comments});
 });
 
 //eliminacion

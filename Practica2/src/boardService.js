@@ -128,7 +128,7 @@ export function addComment(product, comment) {
     product.comments.set(comment.id, comment);
 }
 export function getComments(product) {
-    return [product.comments.values()];
+    return [...product.comments.values()];
 }
 
 

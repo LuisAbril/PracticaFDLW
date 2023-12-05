@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Appel | {{nombreProd}} </title>
+    <title>Appel | {{producto.nombreProd}} </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link type="text/css" href="/style.css" rel="stylesheet">
@@ -29,23 +29,23 @@
                 <div class="subelemimg">
                     <div id="slider">
                         <figure>
-                            <img src="{{imgProd2}}">
-                            <img src="{{imgProd}}">
+                            <img src="{{producto.imgProd2}}">
+                            <img src="{{producto.imgProd}}">
                         </figure>
                     </div>
                 </div>
                 <div class="subelemname">
                     
-                    <p class="nombreProd">{{nombreProd}}</p>
-                    <p class="subtituloProd">Tipo de Producto: {{tipoProd}}</p>
-                    <p class="subtituloProd">Color: <i class="bi bi-square-fill" style="color: {{colorProd}}"></i> {{nombreColor}}</h6>
-                    <p class="subtituloProd">Capacidad: {{capProd}}</p>
-                    <p class="subtituloProd">Cargador: {{cargaProd}}</p>
+                    <p class="nombreProd">{{producto.nombreProd}}</p>
+                    <p class="subtituloProd">Tipo de Producto: {{producto.tipoProd}}</p>
+                    <p class="subtituloProd">Color: <i class="bi bi-square-fill" style="color: {{producto.colorProd}}"></i> {{producto.nombreColor}}</h6>
+                    <p class="subtituloProd">Capacidad: {{producto.capProd}}</p>
+                    <p class="subtituloProd">Cargador: {{producto.cargaProd}}</p>
                     
                     <p class="subtituloProd">Características:</p>
-                    <pre class="specs">{{descProd}}</pre>
+                    <pre class="specs">{{producto.descProd}}</pre>
                     
-                    <div class="precioProd">{{precioProd}}€</div>
+                    <div class="precioProd">{{producto.precioProd}}€</div>
                     <div class="btn btn-lg" id="comprar"><i class="bi bi-cart carrito"></i> Comprar</i></div>
                 </div>
             </div> 
@@ -56,7 +56,7 @@
                             src="https://lh4.googleusercontent.com/-ZsdGLrjnEXc/AAAAAAAAAAI/AAAAAAAAAAA/AKF05nBzbwJWlR51UKQIC_ALX_Rs51ExlA/photo.jpg">
                     </div>
                     <div class="bloque">
-                        <form class="bloque2" action="/producto/{{id}}" method="post">
+                        <form class="bloque2" action="/producto/{{producto.id}}" method="post">
                             <div class="usernamediv"><input type="text" class="username" name="username" placeholder="Nombre de usuario"></div>
                             <div class="punt">
                                 <select name="punt" id="val" required>
@@ -77,14 +77,14 @@
                         </form>
                     </div>
                 </div>
-                {{#poducto.comments}}
+                {{#comments}}
                 <div class="coment">
                     <div class="pfp" style="background: rgb({{r}},{{g}},{{b}});">{{firstL}}</div>
                     <div class="username">{{username}}</div>
                     <div class="estrellas">{{punt}}/5 <i class="bi bi-star-fill staricon"></i></div>
                     <div class="opinion">{{commentText}}</div>  
                 </div>
-                {{/poducto.comments}}
+                {{/comments}}
             </div>
         </div>
             <div class="sidebar"></div>

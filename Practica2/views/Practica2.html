@@ -78,11 +78,11 @@
                     </div>
                 </div>
                 {{#comments}}
-                <div class="coment">
-                    <div class="pfp" style="background: rgb({{r}},{{g}},{{b}});">{{firstL}}</div>
-                    <div class="username">{{username}}</div>
-                    <div class="estrellas">{{punt}}/5 <i class="bi bi-star-fill staricon"></i></div>
-                    <div class="opinion">{{commentText}}</div>  
+                <div class="comentario">
+                    <div class="fotoPerfil" style="background: rgb({{r}},{{g}},{{b}});"><p class="letra">{{firstL}}</p></div>
+                    <div class="nombreUser">{{username}}</div>
+                    <div class="puntuacion">{{punt}}/5 <i class="bi bi-star-fill staricon"></i></div>
+                    <div class="opinionUser">{{commentText}}</div>  
                 </div>
                 {{/comments}}
             </div>
@@ -112,14 +112,14 @@
             <div class="footer"></div>
         </div>
         <div class="add">
-            <a href="/product/{{id}}/delete">
+            <a href="/product/{{producto.id}}/delete">
                 <div class="papelera">
                     <i  class="bi bi-trash"></i>
                 </div>
             </a>
         </div>
         <div class="add doble">
-            <a href="/product/edit/{{id}}">
+            <a href="/product/edit/{{producto.id}}">
                 <div class="edit">
                     <i class="bi bi-pencil-square"></i>
                 </div>

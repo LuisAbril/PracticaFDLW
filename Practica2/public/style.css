@@ -250,6 +250,52 @@
    max-height: 200px;
 }
 
+/*Comentarios sacados del servidor*/
+.comentario{
+   min-width: 97%;
+   max-width: 97%;
+   margin:10px;
+   background: whitesmoke;
+   border-radius: 7px;
+   display: grid;
+   grid-template-columns: [x0] 70px [x1] 1fr [x2];
+   grid-template-rows: [y0] 25px [y1] 20px [y2] 1fr [y3];
+}
+.fotoPerfil{
+   grid-column: x0/x1;
+   grid-row: y0/y3;
+   border-radius: 5000px;
+   height: 55px;
+   width: 55px;
+   margin:auto;
+   margin-top: 10px;
+}
+.letra{
+   margin:auto;
+   text-align: center;
+   margin-top: 7px;
+   color:white;
+   font-size: 25px;
+   font-weight: 600;
+}
+.nombreUser{
+   grid-column: x1/x2;
+   grid-row: y0/y1;
+   font-weight: bold;
+   margin-top:5px;
+}
+.puntuacion{
+   grid-column: x1/x2;
+   grid-row: y1/y2;
+   font-weight: bold;
+}
+.opinionUser{
+   grid-column: x1/x2;
+   grid-row: y2/y3;
+   margin-top: 5px;
+   margin-right: 20px;
+}
+
 .redesociales{
    background: rgb(0, 0, 0);
    min-width: 50px;

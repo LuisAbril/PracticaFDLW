@@ -76,7 +76,7 @@ router.post('/producto/:id', (req, res) => {
     let comment = {username, firstL, commentText, punt, r, g, b};
     console.log(comment);
     boardService.addComment(producto, comment);
-    res.redirect('/producto/'+id)
+    res.redirect('/producto/'+id);
 });
 
 export default router;

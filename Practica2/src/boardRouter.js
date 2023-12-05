@@ -22,8 +22,9 @@ router.post('/', (req, res) => {
     let carga=[{CargaN: "Ninguno", selected: cargaProd=="Ninguno"}, {CargaN: "Lighting", selected: cargaProd=="Lighting"},{CargaN: "USB-C", selected: cargaProd=="USB-C"}, {CargaN: "Inalambrico", selected: cargaProd=="Inalambrico"}];    
     let cap=[{CapN: "No aplica", selected: capProd=="No aplica"}, {CapN: "64 GB", selected: capProd=="64 GB"},{CapN: "128 GB", selected: capProd=="128 GB"}, {CapN: "256 GB", selected: capProd=="256 GB"}, {CapN: "512 GB", selected: capProd=="512 GB"}, {CapN: "1 TB", selected: capProd=="1 TB"}];
     let comments = new Map();
+    let nextIdComment = 0;
     boardService.addProduct({ nombreProd, precioProd, imgProd, imgProd2, descProd,
-        tipoProd, tipo, cargaProd, carga, capProd, cap, colorProd, nombreColor, comments });
+        tipoProd, tipo, cargaProd, carga, capProd, cap, colorProd, nombreColor, comments, nextIdComment });
     res.redirect("/");
 });
 

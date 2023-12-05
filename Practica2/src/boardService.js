@@ -1,9 +1,9 @@
 const productos = new Map();
 let nextId = 0;
-const commentsIP15 = new Map();
-commentsIP15.set(0, {username: "Yaume", firstL:"Y", commentText:"Salchipapas", punt:"3" ,r:"200" ,g:"5" ,b:"0"});
-commentsIP15.set(1, {username: "Pepe", firstL:"P", commentText:"Más salchipapas", punt:"4" ,r:"20" ,g:"150" ,b:"150"});
-commentsIP15.set(2, {username: "Alex", firstL:"A", commentText:"Buena calidad", punt:"5" ,r:"0" ,g:"40" ,b:"200"});
+let comments= new Map();
+comments.set(0, {username: "Yaume", firstL:"Y", commentText:"Salchipapas", punt:"3" ,r:"200" ,g:"5" ,b:"0"});
+comments.set(1, {username: "Pepe", firstL:"P", commentText:"Más salchipapas", punt:"4" ,r:"20" ,g:"150" ,b:"150"});
+comments.set(2, {username: "Alex", firstL:"A", commentText:"Buena calidad", punt:"5" ,r:"0" ,g:"40" ,b:"200"});
 //crear varios productos diferentes con el siguiente formato:
 addProduct({
     nombreProd: "AiPhone 15 Pro", precioProd: "1219,00", imgProd: "https://thumb.pccomponentes.com/w-530-530/articles/1077/10777860/1838-apple-iphone-15-pro-256gb-titanio-azul-libre.jpg", imgProd2: "https://thumb.pccomponentes.com/w-530-530/articles/1077/10777860/3456-apple-iphone-15-pro-256gb-titanio-azul-libre-mejor-precio.jpg",
@@ -11,7 +11,7 @@ addProduct({
     tipo: [{ProdN: "Movil", selected: true}, {ProdN: "Tableta", selected: false},{ProdN: "Ordenador", selected: false}, {ProdN: "Reloj", selected: false}, {ProdN: "Auriculares", selected: false}, {ProdN: "Accesorios", selected: false}],
     carga: [{ CargaN: "Ninguno", selected: false }, { CargaN: "Lighting", selected: false }, { CargaN: "USB-C", selected: true }, { CargaN: "Inalambrico", selected: false }],
     cap: [{ CapN: "No aplica", selected: false }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: true }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }],
-    comments: new Map(), nextIdComment: 3
+    comments, nextIdComment: 3
 });
 
 addProduct({
@@ -125,7 +125,10 @@ export function getProduct(id) {
 export function addComment(product, comment) {
     let id = product.nextIdComment++;
     comment.id=id.toString();
-    comments.set(comment.id, comment);
+    product.comments.set(comment.id, comment);
+}
+export function getComments(product) {
+    return [product.comments.values()];
 }
 
 

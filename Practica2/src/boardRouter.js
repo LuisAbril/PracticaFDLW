@@ -64,17 +64,15 @@ router.post('/formedit/:id', (req, res) => {
 //subir comentario
 router.post('/producto/:id', (req, res) => {
     let producto = boardService.getProduct(req.params.id);
+    console.log(producto);
     let {username, commentText, punt}= req.body
     let firstL = username[0];
-    console.log(firstL);
     let r = Math.round(Math.random()*255);
     let g = Math.round(Math.random()*255);
     let b = Math.round(Math.random()*255);
-    console.log(r);
-    console.log(g);
-    console.log(b);
     let comment = {username, firstL, commentText, punt, r, g, b};
     console.log(comment);
+    boardService.addComment(producto, comment);
 });
 
 export default router;

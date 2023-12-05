@@ -11,7 +11,7 @@ addProduct({
     tipo: [{ProdN: "Movil", selected: true}, {ProdN: "Tableta", selected: false},{ProdN: "Ordenador", selected: false}, {ProdN: "Reloj", selected: false}, {ProdN: "Auriculares", selected: false}, {ProdN: "Accesorios", selected: false}],
     carga: [{ CargaN: "Ninguno", selected: false }, { CargaN: "Lighting", selected: false }, { CargaN: "USB-C", selected: true }, { CargaN: "Inalambrico", selected: false }],
     cap: [{ CapN: "No aplica", selected: false }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: true }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }],
-    comments: comments , nextIdComment: 3
+    comments: comments, nextIdComment: 3
 });
 
 addProduct({
@@ -20,7 +20,7 @@ addProduct({
     tipo: [{ProdN: "Movil", selected: false}, {ProdN: "Tableta", selected: false},{ProdN: "Ordenador", selected: false}, {ProdN: "Reloj", selected: true}, {ProdN: "Auriculares", selected: false}, {ProdN: "Accesorios", selected: false}],
     carga: [{ CargaN: "Ninguno", selected: false }, { CargaN: "Lighting", selected: false }, { CargaN: "USB-C", selected: true }, { CargaN: "Inalambrico", selected: false }],
     cap: [{ CapN: "No aplica", selected: false }, { CapN: "64 GB", selected: true }, { CapN: "128 GB", selected: false }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }],
-    comments: new Map()
+    comments: new Map(), nextIdComment: 0
 })
 
 addProduct({
@@ -29,7 +29,7 @@ addProduct({
     tipo: [{ProdN: "Movil", selected: false}, {ProdN: "Tableta", selected: false},{ProdN: "Ordenador", selected: false}, {ProdN: "Reloj", selected: false}, {ProdN: "Auriculares", selected: true}, {ProdN: "Accesorios", selected: false}],
     carga: [{ CargaN: "Ninguno", selected: false }, { CargaN: "Lighting", selected: false }, { CargaN: "USB-C", selected: true }, { CargaN: "Inalambrico", selected: false }],
     cap: [{ CapN: "No aplica", selected: true }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: false }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }],
-    comments: new Map()
+    comments: new Map(), nextIdComment: 0
 });
 
 addProduct({
@@ -38,7 +38,7 @@ addProduct({
     tipo: [{ProdN: "Movil", selected: false}, {ProdN: "Tableta", selected: false},{ProdN: "Ordenador", selected: false}, {ProdN: "Reloj", selected: false}, {ProdN: "Auriculares", selected: false}, {ProdN: "Accesorios", selected: true}],
     carga: [{ CargaN: "Ninguno", selected: true }, { CargaN: "Lighting", selected: false }, { CargaN: "USB-C", selected: false }, { CargaN: "Inalambrico", selected: false }],
     cap: [{ CapN: "No aplica", selected: true }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: false }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }],
-    comments: new Map()
+    comments: new Map(), nextIdComment: 0
 })
 
 addProduct({
@@ -47,7 +47,7 @@ addProduct({
     tipo: [{ProdN: "Movil", selected: false}, {ProdN: "Tableta", selected: true},{ProdN: "Ordenador", selected: false}, {ProdN: "Reloj", selected: false}, {ProdN: "Auriculares", selected: false}, {ProdN: "Accesorios", selected: false}],
     carga: [{ CargaN: "Ninguno", selected: false }, { CargaN: "Lighting", selected: true }, { CargaN: "USB-C", selected: false }, { CargaN: "Inalambrico", selected: false }],
     cap: [{ CapN: "No aplica", selected: true }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: false }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }],
-    comments: new Map()
+    comments: new Map(), nextIdComment: 0
 })
 
 addProduct({
@@ -56,7 +56,7 @@ addProduct({
     tipo: [{ProdN: "Movil", selected: true}, {ProdN: "Tableta", selected: false},{ProdN: "Ordenador", selected: false}, {ProdN: "Reloj", selected: false}, {ProdN: "Auriculares", selected: false}, {ProdN: "Accesorios", selected: false}],
     carga: [{ CargaN: "Ninguno", selected: false }, { CargaN: "Lighting", selected: true }, { CargaN: "USB-C", selected: false }, { CargaN: "Inalambrico", selected: false }],
     cap: [{ CapN: "No aplica", selected: true }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: false }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }],
-    comments: new Map()
+    comments: new Map(), nextIdComment: 0
 })
 
 addProduct({
@@ -65,7 +65,7 @@ addProduct({
     tipo: [{ProdN: "Movil", selected: false}, {ProdN: "Tableta", selected: false},{ProdN: "Ordenador", selected: true}, {ProdN: "Reloj", selected: false}, {ProdN: "Auriculares", selected: false}, {ProdN: "Accesorios", selected: false}],
     carga: [{ CargaN: "Ninguno", selected: false }, { CargaN: "Lighting", selected: false }, { CargaN: "USB-C", selected: true }, { CargaN: "Inalambrico", selected: false }],
     cap: [{ CapN: "No aplica", selected: true }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: false }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: true }],
-    comments: new Map()
+    comments: new Map(), nextIdComment: 0
 })
 
 addProduct({
@@ -74,7 +74,7 @@ addProduct({
     tipo: [{ProdN: "Movil", selected: false}, {ProdN: "Tableta", selected: false},{ProdN: "Ordenador", selected: false}, {ProdN: "Reloj", selected: false}, {ProdN: "Auriculares", selected: false}, {ProdN: "Accesorios", selected: true}],
     carga: [{ CargaN: "Ninguno", selected: false }, { CargaN: "Lighting", selected: false }, { CargaN: "USB-C", selected: true }, { CargaN: "Inalambrico", selected: false }],
     cap: [{ CapN: "No aplica", selected: true }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: false }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }],
-    comments: new Map()
+    comments: new Map(), nextIdComment: 0
 })
 
 addProduct({
@@ -83,7 +83,7 @@ addProduct({
     tipo: [{ProdN: "Movil", selected: false}, {ProdN: "Tableta", selected: false},{ProdN: "Ordenador", selected: false}, {ProdN: "Reloj", selected: false}, {ProdN: "Auriculares", selected: false}, {ProdN: "Accesorios", selected: true}],
     carga: [{ CargaN: "Ninguno", selected: false }, { CargaN: "Lighting", selected: false }, { CargaN: "USB-C", selected: false }, { CargaN: "Inalambrico", selected: true }],
     cap: [{ CapN: "No aplica", selected: true }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: false }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }],
-    comments: new Map()
+    comments: new Map(), nextIdComment: 0
 })
 addProduct({
     nombreProd: "Loyitek Circle View", precioProd: "199,00", imgProd: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/HPGS2?wid=532&hei=582&fmt=png-alpha&.v=1659482179950", imgProd2: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/HPGS2?wid=532&hei=582&fmt=png-alpha&.v=1659482179950",
@@ -91,7 +91,7 @@ addProduct({
     tipo: [{ProdN: "Movil", selected: false}, {ProdN: "Tableta", selected: false},{ProdN: "Ordenador", selected: false}, {ProdN: "Reloj", selected: false}, {ProdN: "Auriculares", selected: false}, {ProdN: "Accesorios", selected: true}],
     carga: [{ CargaN: "Ninguno", selected: true }, { CargaN: "Lighting", selected: false }, { CargaN: "USB-C", selected: false }, { CargaN: "Inalambrico", selected: false }],
     cap: [{ CapN: "No aplica", selected: true }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: false }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }],
-    comments: new Map()
+    comments: new Map(), nextIdComment: 0
 })
 addProduct({
     nombreProd: "Appel Pencil", precioProd: "149,00", imgProd: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/apple-pencil-2-splitter-202210?wid=560&hei=528&fmt=p-jpg&qlt=95&.v=1664466559350", imgProd2: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/apple-pencil-2-splitter-202210?wid=560&hei=528&fmt=p-jpg&qlt=95&.v=1664466559350",
@@ -99,7 +99,7 @@ addProduct({
     tipo: [{ProdN: "Movil", selected: false}, {ProdN: "Tableta", selected: false},{ProdN: "Ordenador", selected: false}, {ProdN: "Reloj", selected: false}, {ProdN: "Auriculares", selected: false}, {ProdN: "Accesorios", selected: true}],
     carga: [{ CargaN: "Ninguno", selected: false }, { CargaN: "Lighting", selected: false }, { CargaN: "USB-C", selected: true }, { CargaN: "Inalambrico", selected: false }],
     cap: [{ CapN: "No aplica", selected: true }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: false }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }],
-    comments: new Map()
+    comments: new Map(), nextIdComment: 0
 })
 
 

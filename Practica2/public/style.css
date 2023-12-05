@@ -163,8 +163,8 @@
 .subelemimg{
    max-width: 40%;
    min-width: 400px;
-   margin-left: 10%;
-   margin-right: 15%;
+   margin-left: 7%;
+   margin-right: 7%;
    margin-top: 40px;
 }
 
@@ -173,6 +173,7 @@
    min-width:200px;
    font-size: 17px;
    margin-top: 30px;
+   margin:auto;
    color: rgb(5, 5, 60);
 }
 

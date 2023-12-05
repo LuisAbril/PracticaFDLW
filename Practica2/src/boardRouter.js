@@ -21,9 +21,9 @@ router.post('/', (req, res) => {
     let tipo=[{ProdN: "Movil", selected: tipoProd=="Movil"}, {ProdN: "Tableta", selected: tipoProd=="Tableta"},{ProdN: "Ordenador", selected: tipoProd=="Ordenador"}, {ProdN: "Reloj", selected: tipoProd=="Reloj"}, {ProdN: "Auriculares", selected: tipoProd=="Auriculares"}, {ProdN: "Accesorios", selected: tipoProd=="Accesorios"}];    
     let carga=[{CargaN: "Ninguno", selected: cargaProd=="Ninguno"}, {CargaN: "Lighting", selected: cargaProd=="Lighting"},{CargaN: "USB-C", selected: cargaProd=="USB-C"}, {CargaN: "Inalambrico", selected: cargaProd=="Inalambrico"}];    
     let cap=[{CapN: "No aplica", selected: capProd=="No aplica"}, {CapN: "64 GB", selected: capProd=="64 GB"},{CapN: "128 GB", selected: capProd=="128 GB"}, {CapN: "256 GB", selected: capProd=="256 GB"}, {CapN: "512 GB", selected: capProd=="512 GB"}, {CapN: "1 TB", selected: capProd=="1 TB"}];
-
+    let comments = new Map();
     boardService.addProduct({ nombreProd, precioProd, imgProd, imgProd2, descProd,
-        tipoProd, tipo, cargaProd, carga, capProd, cap, colorProd, nombreColor });
+        tipoProd, tipo, cargaProd, carga, capProd, cap, colorProd, nombreColor, comments });
     res.redirect("/");
 });
 

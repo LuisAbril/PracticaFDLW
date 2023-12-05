@@ -50,31 +50,31 @@
                 </div>
             </div> 
             <div class="comentbox"> <p class="titlecoment">Comentarios</p>
-                <div class="comentedit">
+                <div id="comentedit">
                         
                     <div class="pfp"><img class="pic"
                             src="https://lh4.googleusercontent.com/-ZsdGLrjnEXc/AAAAAAAAAAI/AAAAAAAAAAA/AKF05nBzbwJWlR51UKQIC_ALX_Rs51ExlA/photo.jpg">
                     </div>
-                    <div class="username">Tú</div>
-                    <div>
-                        <form>
-                        <select name="valoracion" id="val" required>
-                            <option value="">...</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                        <i class="bi bi-star-fill staricon"></i>
-                    </div>
-                    <div class="opinion">
-                        
-                            <textarea type="text" class="campocoment" placeholder="Introduzca su texto del comentario"></textarea>
-                        
-                            <input type="submit" class="btpublicar" style="border-radius:10px; border-color: beige;" value="Publicar">
+                    <div class="bloque">
+                        <form class="bloque2" action="/producto/:id" method="post">
+                            <div class="usernamediv"><input type="text" class="username" name="username" placeholder="Nombre de usuario"></div>
+                            <div class="punt">
+                                <select name="punt" id="val" required>
+                                    <option value="">...</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                                <i class="bi bi-star-fill staricon"></i>
+                            </div>
+                            <div class="opinion">
+                                <textarea name="commentText" type="text" class="campocoment" placeholder="Introduzca su texto del comentario"></textarea>
+                                
+                                <input type="submit" class="btpublicar" style="border-radius:10px; border-color: beige;" value="Publicar">
+                            </div>
                         </form>
-
                     </div>
                 </div>
                 {{#comments}}

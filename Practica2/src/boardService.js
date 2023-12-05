@@ -1,15 +1,17 @@
 const productos = new Map();
 let nextId = 0;
-const comments = new Map();
-let nextIdComment = 0;
+const commentsIP15 = new Map();
+commentsIP15.set(0, {username: "Yaume", firstL:"Y", commentText:"Salchipapas", punt:"3" ,r:"200" ,g:"5" ,b:"0"});
+commentsIP15.set(1, {username: "Pepe", firstL:"P", commentText:"Más salchipapas", punt:"4" ,r:"20" ,g:"150" ,b:"150"});
+commentsIP15.set(2, {username: "Alex", firstL:"A", commentText:"Buena calidad", punt:"5" ,r:"0" ,g:"40" ,b:"200"});
 //crear varios productos diferentes con el siguiente formato:
 addProduct({
     nombreProd: "AiPhone 15 Pro", precioProd: "1219,00", imgProd: "https://thumb.pccomponentes.com/w-530-530/articles/1077/10777860/1838-apple-iphone-15-pro-256gb-titanio-azul-libre.jpg", imgProd2: "https://thumb.pccomponentes.com/w-530-530/articles/1077/10777860/3456-apple-iphone-15-pro-256gb-titanio-azul-libre-mejor-precio.jpg",
     tipoProd: "Movil", cargaProd: "USB-C", capProd:"128 GB", colorProd: "#484E6E", nombreColor:"Titanio Azul", descProd:"\n- Telefono móvil  \n- 6,7″ o 6,1″ Pantalla Super Retina XDR \n- Tecnología ProMotion\n- Pantalla siempre activa\n- Titanio con parte trasera de vidrio mate texturizado\n- Botón Acción\n- Dynamic Island\n- Chip A17 Pro con GPU de 6 núcleos\n- Sistema de cámaras Pro\n- Principal de 48 Mpx, Ultra gran angular, Teleobjetivo\n- Fotos de superalta resolución (24 y 48 Mpx)\n- Hasta 29 horas de reproducción de video\n- Compatibilidad con USB 3 para transferencias hasta x20 más rápidas\n- Face ID",
     tipo: [{ProdN: "Movil", selected: true}, {ProdN: "Tableta", selected: false},{ProdN: "Ordenador", selected: false}, {ProdN: "Reloj", selected: false}, {ProdN: "Auriculares", selected: false}, {ProdN: "Accesorios", selected: false}],
     carga: [{ CargaN: "Ninguno", selected: false }, { CargaN: "Lighting", selected: false }, { CargaN: "USB-C", selected: true }, { CargaN: "Inalambrico", selected: false }],
-    cap: [{ CapN: "No aplica", selected: false }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: true }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }]
-
+    cap: [{ CapN: "No aplica", selected: false }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: true }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }],
+    comments: new Map(), nextIdComment: 3
 });
 
 addProduct({
@@ -17,7 +19,8 @@ addProduct({
     tipoProd: "Reloj", cargaProd: "USB-C", capProd: "64 GB", colorProd: "#EDECD7", nombreColor: "Crema", descProd:"\n- Appel Uach Series 9 (2023)  \n- GPS \n- 41 mm\n- Gesto de doble toque\n- Caja de aluminio blanco estrella\n- Correa deportiva blanco estrella\n- Talla S/M ",
     tipo: [{ProdN: "Movil", selected: false}, {ProdN: "Tableta", selected: false},{ProdN: "Ordenador", selected: false}, {ProdN: "Reloj", selected: true}, {ProdN: "Auriculares", selected: false}, {ProdN: "Accesorios", selected: false}],
     carga: [{ CargaN: "Ninguno", selected: false }, { CargaN: "Lighting", selected: false }, { CargaN: "USB-C", selected: true }, { CargaN: "Inalambrico", selected: false }],
-    cap: [{ CapN: "No aplica", selected: false }, { CapN: "64 GB", selected: true }, { CapN: "128 GB", selected: false }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }]
+    cap: [{ CapN: "No aplica", selected: false }, { CapN: "64 GB", selected: true }, { CapN: "128 GB", selected: false }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }],
+    comments: new Map()
 })
 
 addProduct({
@@ -25,7 +28,8 @@ addProduct({
     tipoProd: "Auriculares", cargaProd: "USB-C", capProd: "No Aplica", colorProd: "#FFFFFF", nombreColor: "Blanco", descProd: "\n- APPEL AirPuds (2022 3ª gen)  \n- Inalámbricos \n- Bluetooth®\n- Estuche Carga no Inalámbrica\n- Chip H1\n- Siri\n- Blanco",
     tipo: [{ProdN: "Movil", selected: false}, {ProdN: "Tableta", selected: false},{ProdN: "Ordenador", selected: false}, {ProdN: "Reloj", selected: false}, {ProdN: "Auriculares", selected: true}, {ProdN: "Accesorios", selected: false}],
     carga: [{ CargaN: "Ninguno", selected: false }, { CargaN: "Lighting", selected: false }, { CargaN: "USB-C", selected: true }, { CargaN: "Inalambrico", selected: false }],
-    cap: [{ CapN: "No aplica", selected: true }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: false }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }]
+    cap: [{ CapN: "No aplica", selected: true }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: false }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }],
+    comments: new Map()
 });
 
 addProduct({
@@ -33,7 +37,8 @@ addProduct({
     tipoProd: "Accesorios", cargaProd: "Ninguno", capProd: "No Aplica", colorProd: "#0E75CF", nombreColor: "Azul", descProd: "\n- Funda Appel AiPhone 12 \n- MagSafe \n- Silicona \n- Azul",
     tipo: [{ProdN: "Movil", selected: false}, {ProdN: "Tableta", selected: false},{ProdN: "Ordenador", selected: false}, {ProdN: "Reloj", selected: false}, {ProdN: "Auriculares", selected: false}, {ProdN: "Accesorios", selected: true}],
     carga: [{ CargaN: "Ninguno", selected: true }, { CargaN: "Lighting", selected: false }, { CargaN: "USB-C", selected: false }, { CargaN: "Inalambrico", selected: false }],
-    cap: [{ CapN: "No aplica", selected: true }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: false }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }]
+    cap: [{ CapN: "No aplica", selected: true }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: false }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }],
+    comments: new Map()
 })
 
 addProduct({
@@ -41,7 +46,8 @@ addProduct({
     tipoProd: "Tableta", cargaProd: "Lightning", capProd: "64 GB", colorProd: "#B0B0B0", nombreColor: "Plata", descProd: "\n- Appel AiPad Mini (2019) \n- 64 GB \n- Plata \n- Wifi + 4G \n- 7,9 pulgadas \n- 2048 x 1536 píxeles \n- 300,5 g",
     tipo: [{ProdN: "Movil", selected: false}, {ProdN: "Tableta", selected: true},{ProdN: "Ordenador", selected: false}, {ProdN: "Reloj", selected: false}, {ProdN: "Auriculares", selected: false}, {ProdN: "Accesorios", selected: false}],
     carga: [{ CargaN: "Ninguno", selected: false }, { CargaN: "Lighting", selected: true }, { CargaN: "USB-C", selected: false }, { CargaN: "Inalambrico", selected: false }],
-    cap: [{ CapN: "No aplica", selected: true }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: false }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }]
+    cap: [{ CapN: "No aplica", selected: true }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: false }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }],
+    comments: new Map()
 })
 
 addProduct({
@@ -49,7 +55,8 @@ addProduct({
     tipoProd: "Movil", cargaProd: "Lightning", capProd: "64 GB", colorProd: "#FF0000", nombreColor: "Rojo", descProd: "\n- Appel AiPhone EseE (2020) \n- 64 GB \n- Rojo \n- 4,7 pulgadas \n- 1334 x 750 píxeles \n- 148 g",
     tipo: [{ProdN: "Movil", selected: true}, {ProdN: "Tableta", selected: false},{ProdN: "Ordenador", selected: false}, {ProdN: "Reloj", selected: false}, {ProdN: "Auriculares", selected: false}, {ProdN: "Accesorios", selected: false}],
     carga: [{ CargaN: "Ninguno", selected: false }, { CargaN: "Lighting", selected: true }, { CargaN: "USB-C", selected: false }, { CargaN: "Inalambrico", selected: false }],
-    cap: [{ CapN: "No aplica", selected: true }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: false }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }]
+    cap: [{ CapN: "No aplica", selected: true }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: false }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }],
+    comments: new Map()
 })
 
 addProduct({
@@ -57,7 +64,8 @@ addProduct({
     tipoProd: "Ordenador", cargaProd: "USB-C", capProd: "1 T", colorProd: "#A8B3B8", nombreColor: "Gris Espacial", descProd:"\n- Appel MacBuk Er (2020) \n- 1 T \n- Gris Espacial \n- 13,3 pulgadas \n- 2560 x 1600 píxeles \n- 1,29 kg",
     tipo: [{ProdN: "Movil", selected: false}, {ProdN: "Tableta", selected: false},{ProdN: "Ordenador", selected: true}, {ProdN: "Reloj", selected: false}, {ProdN: "Auriculares", selected: false}, {ProdN: "Accesorios", selected: false}],
     carga: [{ CargaN: "Ninguno", selected: false }, { CargaN: "Lighting", selected: false }, { CargaN: "USB-C", selected: true }, { CargaN: "Inalambrico", selected: false }],
-    cap: [{ CapN: "No aplica", selected: true }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: false }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: true }]
+    cap: [{ CapN: "No aplica", selected: true }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: false }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: true }],
+    comments: new Map()
 })
 
 addProduct({
@@ -65,7 +73,8 @@ addProduct({
     tipoProd: "Accesorios", cargaProd: "USB-C", capProd: "No Aplica", colorProd: "#8F989C", nombreColor: "Gris", descProd:"\n- Appel TV 4k \n- Buena capacidad de conexion \n- Gris \n- 4K",
     tipo: [{ProdN: "Movil", selected: false}, {ProdN: "Tableta", selected: false},{ProdN: "Ordenador", selected: false}, {ProdN: "Reloj", selected: false}, {ProdN: "Auriculares", selected: false}, {ProdN: "Accesorios", selected: true}],
     carga: [{ CargaN: "Ninguno", selected: false }, { CargaN: "Lighting", selected: false }, { CargaN: "USB-C", selected: true }, { CargaN: "Inalambrico", selected: false }],
-    cap: [{ CapN: "No aplica", selected: true }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: false }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }]
+    cap: [{ CapN: "No aplica", selected: true }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: false }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }],
+    comments: new Map()
 })
 
 addProduct({
@@ -73,25 +82,24 @@ addProduct({
     tipoProd: "Accesorios", cargaProd: "Inalambrico", capProd: "No Aplica", colorProd: "#8F989C", nombreColor: "Gris", descProd: "Potente",
     tipo: [{ProdN: "Movil", selected: false}, {ProdN: "Tableta", selected: false},{ProdN: "Ordenador", selected: false}, {ProdN: "Reloj", selected: false}, {ProdN: "Auriculares", selected: false}, {ProdN: "Accesorios", selected: true}],
     carga: [{ CargaN: "Ninguno", selected: false }, { CargaN: "Lighting", selected: false }, { CargaN: "USB-C", selected: false }, { CargaN: "Inalambrico", selected: true }],
-    cap: [{ CapN: "No aplica", selected: true }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: false }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }]
+    cap: [{ CapN: "No aplica", selected: true }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: false }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }],
+    comments: new Map()
 })
 addProduct({
     nombreProd: "Loyitek Circle View", precioProd: "199,00", imgProd: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/HPGS2?wid=532&hei=582&fmt=png-alpha&.v=1659482179950", imgProd2: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/HPGS2?wid=532&hei=582&fmt=png-alpha&.v=1659482179950",
     tipoProd: "Accesorios", cargaProd: "Ninguno", capProd: "No Aplica", colorProd: "#8F989C", nombreColor: "Gris", descProd: "Potente",
     tipo: [{ProdN: "Movil", selected: false}, {ProdN: "Tableta", selected: false},{ProdN: "Ordenador", selected: false}, {ProdN: "Reloj", selected: false}, {ProdN: "Auriculares", selected: false}, {ProdN: "Accesorios", selected: true}],
     carga: [{ CargaN: "Ninguno", selected: true }, { CargaN: "Lighting", selected: false }, { CargaN: "USB-C", selected: false }, { CargaN: "Inalambrico", selected: false }],
-    cap: [{ CapN: "No aplica", selected: true }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: false }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }]
+    cap: [{ CapN: "No aplica", selected: true }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: false }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }],
+    comments: new Map()
 })
 addProduct({
     nombreProd: "Appel Pencil", precioProd: "149,00", imgProd: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/apple-pencil-2-splitter-202210?wid=560&hei=528&fmt=p-jpg&qlt=95&.v=1664466559350", imgProd2: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/apple-pencil-2-splitter-202210?wid=560&hei=528&fmt=p-jpg&qlt=95&.v=1664466559350",
     tipoProd: "Accesorios", cargaProd: "USB-C", capProd: "No Aplica", colorProd: "#8F989C", nombreColor: "Gris", descProd: "Potente",
     tipo: [{ProdN: "Movil", selected: false}, {ProdN: "Tableta", selected: false},{ProdN: "Ordenador", selected: false}, {ProdN: "Reloj", selected: false}, {ProdN: "Auriculares", selected: false}, {ProdN: "Accesorios", selected: true}],
     carga: [{ CargaN: "Ninguno", selected: false }, { CargaN: "Lighting", selected: false }, { CargaN: "USB-C", selected: true }, { CargaN: "Inalambrico", selected: false }],
-    cap: [{ CapN: "No aplica", selected: true }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: false }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }]
-})
-
-addComment({
-    username: "Yaume", firstL:"Y", commentText:"Salchipapas", punt:"3" ,r:"200" ,g:"5" ,b:"0"
+    cap: [{ CapN: "No aplica", selected: true }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: false }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }],
+    comments: new Map()
 })
 
 
@@ -114,8 +122,8 @@ export function getProducts() {
 export function getProduct(id) {
     return productos.get(id);
 }
-export function addComment(comment) {
-    let id = nextIdComment++;
+export function addComment(product, comment) {
+    let id = product.nextIdComment++;
     comment.id=id.toString();
     comments.set(comment.id, comment);
 }

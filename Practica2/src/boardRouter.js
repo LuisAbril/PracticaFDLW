@@ -31,6 +31,7 @@ router.get('/producto/:id', (req, res) => {
     let producto = boardService.getProduct(req.params.id);
     res.render('Practica2', producto);
 });
+
 //eliminacion
 router.get('/product/:id/delete', (req, res) => {
     boardService.deleteProduct(req.params.id);
@@ -58,6 +59,22 @@ router.post('/formedit/:id', (req, res) => {
         tipoProd, tipo, cargaProd, carga, capProd, cap, colorProd, nombreColor
     });
     res.redirect("/");
+});
+
+//subir comentario
+router.post('/producto/:id', (req, res) => {
+    let producto = boardService.getProduct(req.params.id);
+    let {username, commentText, punt}= req.body
+    let firstL = username[0];
+    console.log(firstL);
+    let r = Math.round(Math.random()*255);
+    let g = Math.round(Math.random()*255);
+    let b = Math.round(Math.random()*255);
+    console.log(r);
+    console.log(g);
+    console.log(b);
+    let comment = {username, firstL, commentText, punt, r, g, b};
+    console.log(comment);
 });
 
 export default router;

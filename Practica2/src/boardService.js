@@ -4,6 +4,10 @@ let comments= new Map();
 comments.set(0, {username: "Yaume", firstL:"Y", commentText:"Salchipapas", punt:"3" ,r:"200" ,g:"5" ,b:"0"});
 comments.set(1, {username: "Pepe", firstL:"P", commentText:"Más salchipapas", punt:"4" ,r:"20" ,g:"150" ,b:"150"});
 comments.set(2, {username: "Alex", firstL:"A", commentText:"Buena calidad", punt:"5" ,r:"0" ,g:"40" ,b:"200"});
+let tipo=[{ProdN: "Movil"}, {ProdN: "Tableta"},{ProdN: "Ordenador"}, {ProdN: "Reloj"}, {ProdN: "Auriculares"}, {ProdN: "Accesorios"}];    
+let carga=[{CargaN: "Ninguno"}, {CargaN: "Lighting"},{CargaN: "USB-C"}, {CargaN: "Inalambrico"}];    
+let cap=[{CapN: "No aplica"}, {CapN: "64 GB"},{CapN: "128 GB"}, {CapN: "256 GB"}, {CapN: "512 GB"}, {CapN: "1 TB"}];
+let prodTemp = {tipo, carga, cap};
 //crear varios productos diferentes con el siguiente formato:
 addProduct({
     nombreProd: "AiPhone 15 Pro", precioProd: "1219,00", imgProd: "https://thumb.pccomponentes.com/w-530-530/articles/1077/10777860/1838-apple-iphone-15-pro-256gb-titanio-azul-libre.jpg", imgProd2: "https://thumb.pccomponentes.com/w-530-530/articles/1077/10777860/3456-apple-iphone-15-pro-256gb-titanio-azul-libre-mejor-precio.jpg",
@@ -129,6 +133,15 @@ export function addComment(product, comment) {
 }
 export function getComments(product) {
     return [...product.comments.values()];
+}
+export function prodTemporal(product) {
+    prodTemp = product;
+}
+export function getTemporal() {
+    return prodTemp;
+}
+export function resetTemporal() {
+    prodTemp = {tipo, carga, cap};
 }
 
 

@@ -65,6 +65,7 @@
 
 .content {
    background: rgb(131, 183, 209);
+   min-height: 485px;
  }
 
  .footer {
@@ -649,6 +650,7 @@
    background-color: red;
    height: 50px;
    width: 30%;
+   min-width:375px;
    border-radius: 15px;
    color:whitesmoke
 }
@@ -670,4 +672,11 @@
    font-size: 7px;
    top: -6px;
    left: 2px;
+}
+#noProd{
+   color:white;
+   font-size: 50px;
+   text-align: center;
+   flex: auto;
+   margin-top: 180px;
 }

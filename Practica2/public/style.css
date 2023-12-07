@@ -256,6 +256,7 @@
 .comentario{
    min-width: 97%;
    max-width: 97%;
+   min-height: 75px;
    margin:10px;
    background: whitesmoke;
    border-radius: 7px;
@@ -469,7 +470,7 @@
    color: rgb(15, 9, 102);
    font-size: 36px;
    right: -4px;
-   top:-3.5px;
+   top:-5px;
    padding: 10px;
    padding-top: 0px;
    padding-bottom: 0px;

@@ -98,9 +98,20 @@ router.post('/producto/:id', (req, res) => {
     let r = Math.round(Math.random()*255);
     let g = Math.round(Math.random()*255);
     let b = Math.round(Math.random()*255);
-    let comment = {username, firstL, commentText, punt, r, g, b};
-    boardService.addComment(producto, comment);
-    res.redirect('/producto/'+id);
+
+    if (!punt){
+        res.redirect('/producto/'+id); 
+    } else if (!username){
+        username = 'Anónimo';
+        firstL = username[0];
+        let comment = {username, firstL, commentText, punt, r, g, b};
+        boardService.addComment(producto, comment);
+        res.redirect('/producto/'+id);
+    } else {
+        let comment = {username, firstL, commentText, punt, r, g, b};
+        boardService.addComment(producto, comment);
+        res.redirect('/producto/'+id);
+    }
 });
 
 export default router;

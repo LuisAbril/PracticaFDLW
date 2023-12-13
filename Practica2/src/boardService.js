@@ -7,11 +7,11 @@ comments.set(2, {username: "Alex", firstL:"A", commentText:"Buena calidad", punt
 let tipo=[{ProdN: "Movil"}, {ProdN: "Tableta"},{ProdN: "Ordenador"}, {ProdN: "Reloj"}, {ProdN: "Auriculares"}, {ProdN: "Accesorios"}];    
 let carga=[{CargaN: "Ninguno"}, {CargaN: "Lighting"},{CargaN: "USB-C"}, {CargaN: "Inalambrico"}];    
 let cap=[{CapN: "No aplica"}, {CapN: "64 GB"},{CapN: "128 GB"}, {CapN: "256 GB"}, {CapN: "512 GB"}, {CapN: "1 TB"}];
-let prodTemp = {tipo, carga, cap};
+let prodBase = {tipo, carga, cap};
 //crear varios productos diferentes con el siguiente formato:
 addProduct({
     nombreProd: "AiPhone 15 Pro", precioProd: "1219,00", imgProd: "https://thumb.pccomponentes.com/w-530-530/articles/1077/10777860/1838-apple-iphone-15-pro-256gb-titanio-azul-libre.jpg", imgProd2: "https://thumb.pccomponentes.com/w-530-530/articles/1077/10777860/3456-apple-iphone-15-pro-256gb-titanio-azul-libre-mejor-precio.jpg",
-    tipoProd: "Movil", cargaProd: "USB-C", capProd:"128 GB", colorProd: "#484E6E", nombreColor:"Titanio Azul", descProd:"\n- Telefono móvil  \n- 6,7″ o 6,1″ Pantalla Super Retina XDR \n- Tecnología ProMotion\n- Pantalla siempre activa\n- Titanio con parte trasera de vidrio mate texturizado\n- Botón Acción\n- Dynamic Island\n- Chip A17 Pro con GPU de 6 núcleos\n- Sistema de cámaras Pro\n- Principal de 48 Mpx, Ultra gran angular, Teleobjetivo\n- Fotos de superalta resolución (24 y 48 Mpx)\n- Hasta 29 horas de reproducción de video\n- Compatibilidad con USB 3 para transferencias hasta x20 más rápidas\n- Face ID",
+    tipoProd: "Movil", cargaProd: "USB-C", capProd:"128 GB", colorProd: "#484E6E", nombreColor:"Titanio Azul", descProd:"\n- Telefono móvil  \n- 6,7″ o 6,1″ Pantalla Super Retina XDR \n- Tecnología ProMotion\n- Pantalla siempre activa\n- Titanio con parte trasera de vidrio mate texturizado\n- Botón Acción\n- Dynamic Island\n- Chip A17 Pro con GPU de 6 núcleos\n- Sistema de cámaras Pro\n- Principal de 48 Mpx, Ultra gran angular, Teleobjetivo\n- Fotos de superalta resolución (24 y 48 Mpx)\n- Hasta 29 horas de reproducción de video\n- Face ID",
     tipo: [{ProdN: "Movil", selected: true}, {ProdN: "Tableta", selected: false},{ProdN: "Ordenador", selected: false}, {ProdN: "Reloj", selected: false}, {ProdN: "Auriculares", selected: false}, {ProdN: "Accesorios", selected: false}],
     carga: [{ CargaN: "Ninguno", selected: false }, { CargaN: "Lighting", selected: false }, { CargaN: "USB-C", selected: true }, { CargaN: "Inalambrico", selected: false }],
     cap: [{ CapN: "No aplica", selected: false }, { CapN: "64 GB", selected: false }, { CapN: "128 GB", selected: true }, { CapN: "256 GB", selected: false }, { CapN: "512 GB", selected: false }, { CapN: "1 TB", selected: false }],
@@ -134,14 +134,8 @@ export function addComment(product, comment) {
 export function getComments(product) {
     return [...product.comments.values()];
 }
-export function prodTemporal(product) {
-    prodTemp = product;
-}
-export function getTemporal() {
-    return prodTemp;
-}
-export function resetTemporal() {
-    prodTemp = {tipo, carga, cap};
+export function getBase() {
+    return prodBase;
 }
 
 

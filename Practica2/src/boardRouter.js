@@ -4,20 +4,18 @@ import * as boardService from './boardService.js';
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    boardService.resetTemporal();
     res.render('index', {
         productos: boardService.getProducts()
     });
 });
 
 router.get('/nuevo-producto', (req, res) => {
-    let producto=boardService.getTemporal();
+    let producto=boardService.getBase();
     res.render('Practica3', producto);
 });
 
 
 router.post('/', (req, res) => {
-    boardService.resetTemporal();
     let {nombreProd, precioProd, imgProd, imgProd2, descProd,
         tipoProd, cargaProd, capProd, colorProd, nombreColor} = req.body;
 
@@ -31,8 +29,7 @@ router.post('/', (req, res) => {
         let error = true;
         let prod = { nombreProd, precioProd, imgProd, imgProd2, descProd,
             tipoProd, tipo, cargaProd, carga, capProd, cap, colorProd, nombreColor, comments, nextIdComment, error};
-        boardService.prodTemporal(prod);
-        res.redirect('/nuevo-producto');
+        res.render('Practica3',prod);
     } else {
         boardService.addProduct({ nombreProd, precioProd, imgProd, imgProd2, descProd,
             tipoProd, tipo, cargaProd, carga, capProd, cap, colorProd, nombreColor, comments, nextIdComment });
@@ -41,7 +38,6 @@ router.post('/', (req, res) => {
 });
 
 router.get('/producto/:id', (req, res) => {
-    boardService.resetTemporal();
     let producto = boardService.getProduct(req.params.id);
     let comments = boardService.getComments(producto);
     res.render('Practica2', {producto,comments});
@@ -57,14 +53,11 @@ router.get('/product/:id/delete', (req, res) => {
 //lleva a modifcicacion
 router.get('/product/edit/:id', (req, res) => {
     let producto = boardService.getProduct(req.params.id);
-    let prodTemp = boardService.getTemporal();
-    if(prodTemp.error) {producto=prodTemp};
     res.render('modificacion', producto);
 });
 
 //borra producto y crea uno nuevo
 router.post('/formedit/:id', (req, res) => {
-    boardService.resetTemporal();
     let { nombreProd, precioProd, imgProd, imgProd2, descProd,
         tipoProd, cargaProd, capProd, colorProd, nombreColor } = req.body;
 
@@ -81,8 +74,7 @@ router.post('/formedit/:id', (req, res) => {
         let id = req.params.id;
         let prod = { id, nombreProd, precioProd, imgProd, imgProd2, descProd,
             tipoProd, tipo, cargaProd, carga, capProd, cap, colorProd, nombreColor, comments, nextIdComment, error};
-        boardService.prodTemporal(prod);
-        res.redirect('/product/edit/'+id);
+        res.render('modificacion', prod);
     } else {
     boardService.editProduct(req.params.id, { nombreProd, precioProd, imgProd, imgProd2, descProd,
         tipoProd, tipo, cargaProd, carga, capProd, cap, colorProd, nombreColor, comments, nextIdComment});

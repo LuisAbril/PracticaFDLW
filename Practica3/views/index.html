@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="app.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link type="text/css" href="/style.css" rel="stylesheet">
@@ -51,11 +52,15 @@
                 </div>
             </div>
             {{/productos}}
+            </div>
+            <button onclick='loadMore()'>Load more</button>
             {{^productos}}
+            <div>
             <p id="noProd">No hay productos a la venta</p>
+            </div>
             {{/productos}}
 
-        </div>
+        
     </div>
     <div class="sidebar"></div>
     <div class="footer"></div>

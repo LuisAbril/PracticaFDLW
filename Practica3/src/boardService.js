@@ -120,8 +120,14 @@ export function editProduct(id, product) {
     product.id=id.toString();
     productos.set(product.id, product);
 }
-export function getProducts() {
-    return [...productos.values()];
+export function getProducts(from,to) {
+    let values = [...productos.values()];
+    if (from !== undefined) {
+        return values.slice(from, to);
+    } else {
+        return values;
+    }
+   
 }
 export function getProduct(id) {
     return productos.get(id);

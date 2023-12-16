@@ -4,8 +4,9 @@ import * as boardService from './boardService.js';
 const router = express.Router();
 
 router.get('/', (req, res) => {
+    const productos = boardService.getProducts(0,4);
     res.render('index', {
-        productos: boardService.getProducts()
+        productos: productos
     });
 });
 

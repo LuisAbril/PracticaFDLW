@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Appel | {{producto.nombreProd}} </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="header"></div>
+        <div class="header" id="top">
+            <div class="pagename"><img src="https://cdn-icons-png.flaticon.com/512/1155/1155340.png" class="logo">
+            </div>
+            <h1 class="pagename" id="nombre"><p>APPEL</p></h1>
+            <div class="btn btn-lg back" id="btnBack" onclick="location.href='/'">Seguir Buscando <i class="bi bi-search"></i></div>
+        </div>
+        
+        <div class="header"></div>
+        <div class="sidebar"></div>
+        <div class="content">
+            <div class="prodinfo">
+                <div class="subelemimg">
+                    <div id="slider">
+                        <figure>
+                            <img src="{{producto.imgProd2}}">
+                            <img src="{{producto.imgProd}}">
+                        </figure>
+                    </div>
+                </div>
+                <div class="subelemname">
+                    
+                    <p class="nombreProd">{{producto.nombreProd}}</p>
+                    <p class="subtituloProd">Tipo de Producto: {{producto.tipoProd}}</p>
+                    <p class="subtituloProd">Color: <i class="bi bi-square-fill" style="color: {{producto.colorProd}}"></i> {{producto.nombreColor}}</h6>
+                    <p class="subtituloProd">Capacidad: {{producto.capProd}}</p>
+                    <p class="subtituloProd">Cargador: {{producto.cargaProd}}</p>
+                    
+                    <p class="subtituloProd">Características:</p>
+                    <pre class="specs">{{producto.descProd}}</pre>
+                    
+                    <div class="precioProd">{{producto.precioProd}}€</div>
+                    <div class="btn btn-lg" id="comprar"><i class="bi bi-cart carrito"></i> Comprar</i></div>
+                </div>
+            </div> 
+            <div class="comentbox"> <p class="titlecoment">Comentarios</p>
+                <div id="comentedit">
+                        
+                    <div class="pfp"><img class="pic"
+                            src="https://lh4.googleusercontent.com/-ZsdGLrjnEXc/AAAAAAAAAAI/AAAAAAAAAAA/AKF05nBzbwJWlR51UKQIC_ALX_Rs51ExlA/photo.jpg">
+                    </div>
+                    <div class="bloque">
+                        <form class="bloque2" action="/producto/{{producto.id}}" method="post">
+                            <div class="usernamediv"><input type="text" class="username" name="username" placeholder="Nombre de usuario"></div>
+                            <div class="punt">
+                                <select name="punt" id="val" required>
+                                    <option value="">...</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                                <i class="bi bi-star-fill staricon"></i>
+                            </div>
+                            <div class="opinion">
+                                <textarea name="commentText" type="text" class="campocoment" placeholder="Introduzca su texto del comentario"></textarea>
+                                
+                                <input type="submit" class="btpublicar" style="border-radius:10px; border-color: beige;" value="Publicar">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                {{#comments}}
+                <div class="comentario">
+                    <div class="fotoPerfil" style="background: rgb({{r}},{{g}},{{b}});"><p class="letra">{{firstL}}</p></div>
+                    <div class="nombreUser">{{username}}</div>
+                    <div class="puntuacion">{{punt}}/5 <i class="bi bi-star-fill staricon"></i></div>
+                    <div class="opinionUser">{{commentText}}</div>  
+                </div>
+                {{/comments}}
+            </div>
+        </div>
+            <div class="sidebar"></div>
+            <div class="footer"></div>
+            <div class="footer">
+                <br>
+                <div>
+                    <p><kbd class="colorkbd">Nuestras redes sociales:</kbd></p>
+                </div>
+                <div class="container2">
+                    <div class="redessociales"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/2491px-Logo_of_Twitter.svg.png"
+                            class="redes"></div>
+                    <div class="redessociales"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png"
+                            class="redes"></div>
+                    <div class="redessociales"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/2048px-Facebook_icon_2013.svg.png"
+                            class="redes"></div>
+                    <div class="redessociales"><img
+                            src="https://seeklogo.com/images/T/tiktok-share-icon-black-logo-29FFD062A0-seeklogo.com.png"
+                            class="redes fondo"></div>
+                </div>
+            </div>
+            <div class="footer"></div>
+        </div>
+        <div class="add">
+            <a href="/product/{{producto.id}}/delete">
+                <div class="papelera">
+                    <i  class="bi bi-trash"></i>
+                </div>
+            </a>
+        </div>
+        <div class="add doble">
+            <a href="/product/edit/{{producto.id}}">
+                <div class="edit">
+                    <i class="bi bi-pencil-square"></i>
+                </div>
+            </a>
+        </div>
+
+</body>
+
+</html>

@@ -137,8 +137,13 @@ export function addComment(product, comment) {
     comment.id=id.toString();
     product.comments.set(comment.id, comment);
 }
-export function getComments(product) {
-    return [...product.comments.values()];
+export function getComments(product, from, to) {
+    let values = [...product.comments.values()];
+    if (from !== undefined) {
+        return values.slice(from,to);
+    } else {
+        return values;s
+    }
 }
 export function getBase() {
     return prodBase;

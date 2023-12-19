@@ -22,6 +22,18 @@ router.get('/pageProds', (req, res) => {
     });
 });
 
+router.get('/pageComments', (req, res) => {
+
+    const from = parseInt(req.query.from);
+    const to = parseInt(req.query.to);
+
+    const comments = boardService.getComments(from, to);
+
+    res.render('pageComments', {
+        comments: comments
+    });
+});
+
 router.get('/nuevo-producto', (req, res) => {
     let producto=boardService.getBase();
     res.render('Practica3', producto);
@@ -52,7 +64,7 @@ router.post('/', (req, res) => {
 
 router.get('/producto/:id', (req, res) => {
     let producto = boardService.getProduct(req.params.id);
-    let comments = boardService.getComments(producto);
+    let comments = boardService.getComments(producto,0,2);
     res.render('Practica2', {producto,comments});
 });
 

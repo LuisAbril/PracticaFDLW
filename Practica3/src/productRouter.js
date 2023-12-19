@@ -28,7 +28,7 @@ router.get('/pageComments', (req, res) => {
     const to = parseInt(req.query.to);
     const product = (req.query.product);
 
-    const comments = boardService.getComments(product,from, to);
+    const comments = productService.getComments(product,from, to);
 
     res.render('pageComments', {
         comments: comments
@@ -65,8 +65,8 @@ router.post('/', (req, res) => {
 
 router.get('/producto/:id', (req, res) => {
     console.log('REQ PARAMS',req.params.id)
-    let producto = boardService.getProduct(req.params.id);
-    let comments = boardService.getComments(req.params.id,0,2);
+    let producto = productService.getProduct(req.params.id);
+    let comments = productService.getComments(req.params.id,0,2);
     res.render('Practica2', {producto,comments});
 });
 

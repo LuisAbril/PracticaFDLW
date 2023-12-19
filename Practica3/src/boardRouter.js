@@ -10,6 +10,18 @@ router.get('/', (req, res) => {
     });
 });
 
+router.get('/pageProds', (req, res) => {
+
+    const from = parseInt(req.query.from);
+    const to = parseInt(req.query.to);
+
+    const productos = boardService.getProducts(from, to);
+
+    res.render('pageProds', {
+        productos: productos
+    });
+});
+
 router.get('/nuevo-producto', (req, res) => {
     let producto=boardService.getBase();
     res.render('Practica3', producto);

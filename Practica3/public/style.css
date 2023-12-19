@@ -674,10 +674,10 @@
    top: -6px;
    left: 2px;
 }
-#noProd{
-   color:white;
-   font-size: 50px;
-   text-align: center;
-   flex: auto;
-   margin-top: 180px;
+
+#load{
+   background-color: rgb(0, 88, 139);
+   align-items: center;
+   margin-bottom: 30px;
+   
 }

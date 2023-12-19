@@ -28,39 +28,16 @@
             </div>
         </form>
 
-    
-    
-
-
-
-
-
 
     </div>
     <div class="header"></div>
     <div class="sidebar"></div>
     <div class="content">
         <div class="container main">
-            {{#productos}}
-            <div class="cuadrado">
-                <div class="preview">
-                    <a href="producto/{{id}}" class="redir">
-                    <img src="{{imgProd}}" class="prodimg">
-                    <div class="prodname">{{nombreProd}}</div>
-                    <div class="price">Desde {{precioProd}}€</div>
-                    </a>
-                </div>
-            </div>
-            {{/productos}}
-            </div>
-            <button onclick='loadMore()'>Load more</button>
-            {{^productos}}
-            <div>
-            <p id="noProd">No hay productos a la venta</p>
-            </div>
-            {{/productos}}
+            {{>pageProds}}
+        </div>
 
-        
+            <button  id="load"  onclick='loadMore()'>Load more</button>
     </div>
     <div class="sidebar"></div>
     <div class="footer"></div>
@@ -93,6 +70,6 @@
     <div class="footer"></div>
 </div>
 
-
+<script src="script.js"></script>
 </body>
 </html>

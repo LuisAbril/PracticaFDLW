@@ -2,7 +2,7 @@ const NUM_RESULTS = 4;
 
 let loadMoreRequests = 0;
 
-async function loadMore() {
+async function loadMoreProd() {
 
     const from = (loadMoreRequests + 1) * NUM_RESULTS;
     const to = from + NUM_RESULTS;
@@ -16,4 +16,24 @@ async function loadMore() {
     prodDiv.innerHTML += newProducts;
 
     loadMoreRequests++;   
+}
+
+const NUM_RESULTS_COMMENTS = 2;
+
+let loadMoreRequestsComments = 0
+
+async function loadMoreComments() {
+
+    const from = (loadMoreRequestsComments + 1) * NUM_RESULTS_COMMENTS;
+    const to = from + NUM_RESULTS_COMMENTS;
+
+    const response = await fetch(`/pageComments?from=${from}&to=${to}`);
+
+    const newComments = await response.text();
+
+    const commDiv = document.getElementsByClassName('comentbox')[0];
+
+    commDiv.innerHTML += newComments;
+
+    loadMoreRequestsComments++;
 }

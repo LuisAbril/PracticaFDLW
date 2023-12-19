@@ -27,7 +27,7 @@ router.get('/pageComments', (req, res) => {
     const from = parseInt(req.query.from);
     const to = parseInt(req.query.to);
 
-    const comments = boardService.getComments(from, to);
+    const comments = boardService.getComments(product,from, to);
 
     res.render('pageComments', {
         comments: comments

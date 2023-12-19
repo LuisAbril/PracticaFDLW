@@ -474,7 +474,8 @@
 .mas{
    color: rgb(15, 9, 102);
    font-size: 36px;
-   margin-left:15%;
+   margin-left: -5px;
+   padding:0px 10px 0px 10px;
 }
 
 .mas:hover{
@@ -643,7 +644,31 @@
    min-width: 200px;
    text-align: center;
 }
+
 #sub:hover{
+   background-color: rgb(15, 9, 102);
+   transition:.1s;
+   font-weight: 500;
+}
+
+#sub:disabled{
+   background-color: rgb(61, 60, 80);
+}
+
+#res{
+   margin-bottom:10px;
+   margin-top:10px;
+   background: rgb(0, 88, 139);
+   color:white;
+   font-size: normal;
+   padding: 10px 20px 10px 20px;
+   border:none;
+   border-radius: 10px;
+   min-width: 200px;
+   text-align: center;
+}
+
+#res:hover{
    background-color: rgb(15, 9, 102);
    transition:.1s;
    font-weight: 500;

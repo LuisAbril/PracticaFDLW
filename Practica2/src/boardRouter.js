@@ -39,7 +39,7 @@ router.post('/', (req, res) => {
 
 router.get('/producto/:id', (req, res) => {
     let producto = boardService.getProduct(req.params.id);
-    let comments = boardService.getComments(producto);
+    let comments = boardService.getComments(req.params.id);
     res.render('Practica2', {producto,comments});
 });
 

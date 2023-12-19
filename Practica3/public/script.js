@@ -2,7 +2,7 @@ const NUM_RESULTS = 4;
 
 let loadMoreRequests = 0;
 
-async function loadMore() {
+async function loadMoreProd() {
 
     const from = (loadMoreRequests + 1) * NUM_RESULTS;
     const to = from + NUM_RESULTS;
@@ -15,5 +15,5 @@ async function loadMore() {
 
     prodDiv.innerHTML += newProducts;
 
-    loadMoreRequests++;   
+    loadMoreRequests++;
 }

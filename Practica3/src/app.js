@@ -3,8 +3,10 @@ import mustacheExpress from 'mustache-express';
 import bodyParser from 'body-parser';
 import { __dirname } from './dirname.js';
 import productRouter from './productRouter.js';
+import session from 'express-session';
 
 const app = express();
+app.use(session({secret: "constraseña", resave: false, saveUninitialized:true}));
 app.set('views', __dirname + '/../views'); 
 app.set('view engine', 'html');
 app.engine('html', mustacheExpress(), ".html");

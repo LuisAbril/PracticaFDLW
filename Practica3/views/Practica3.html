@@ -47,7 +47,7 @@
             {{^nuevo}}
             <h2 class="newcontent">Modificacion de producto</h2>
             {{/nuevo}}
-            <form class="newcontent2" action="/" method="post">
+            <form class="newcontent2" {{#nuevo}} action="/" {{/nuevo}} {{^nuevo}}action="/formedit/{{id}}" {{/nuevo}} method="post">
                         {{#error}}
                         <div class="error">
                             <p class="errortitle">ERROR!</p>

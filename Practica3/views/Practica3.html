@@ -22,15 +22,31 @@
             <h1 class="pagename" id="nombre">
                 <p>APPEL</p>
             </h1>
-            <div class="back"><a class="btn btn-lg" id="btnBack" href="/">
+            {{#nuevo}}
+            <div class="back">
+                <a class="btn btn-lg" id="btnBack" href="/">
                     <p class="backtext"><i class="bi bi-arrow-left"></i>  Pagina Principal</p>
-                </a></div>
+                </a>
+            </div>
+            {{/nuevo}}
+            {{^nuevo}}
+            <div class="back">
+                <a class="btn btn-lg" id="btnBack" href="/producto/{{id}}">
+                    <p class="backtext"><i class="bi bi-arrow-left"></i>  Volver</p>
+                </a>
+            </div>
+            {{/nuevo}}
         </div>
 
         <div class="header"></div>
         <div class="sidebar"></div>
         <div class="content">
+            {{#nuevo}}
             <h2 class="newcontent">Subida de nuevo producto</h2>
+            {{/nuevo}}
+            {{^nuevo}}
+            <h2 class="newcontent">Modificacion de producto</h2>
+            {{/nuevo}}
             <form class="newcontent2" action="/" method="post">
                         {{#error}}
                         <div class="error">
@@ -113,9 +129,14 @@
                             <textarea type="input" class="introd desc" name="descProd" oninput="waitTimerDesc(this)">{{descProd}}</textarea>
                             <p class="msgError" id="msgErrorDesc"></p>
                         </p>
-                    
-                        <input id="res" type="reset" value="Reiniciar el formulario">
-                        <input id="sub" type="submit" value="Subir producto">
+
+                        {{#nuevo}}
+                            <input id="res" type="reset" value="Reiniciar el formulario">
+                            <input id="sub" type="submit" value="Subir producto">
+                        {{/nuevo}}
+                        {{^nuevo}}
+                            <input id="sub" type="submit" value="Modificar producto">
+                        {{/nuevo}}
             </form>
             
             

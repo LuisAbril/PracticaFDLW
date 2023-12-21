@@ -6,7 +6,7 @@ function habilitarBoton(boton){
         suma += camposErroneos[i];
     }
     if (suma == 0) {
-        boton.disable = false;
+        boton.disabled = false;
     }
 }
 

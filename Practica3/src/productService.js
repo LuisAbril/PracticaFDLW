@@ -138,7 +138,6 @@ export function addComment(product, comment) {
     product.comments.set(comment.id, comment);
 }
 export function getComments(product, from, to) {
-    console.log('PRODUCT',product,'FROM',from,'TO',to);
     let values = [...getProduct(product).comments.values()];
     if (from !== undefined) {
         return values.slice(from,to);

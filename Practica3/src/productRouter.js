@@ -37,6 +37,7 @@ router.get('/pageComments', (req, res) => {
 
 router.get('/nuevo-producto', (req, res) => {
     let producto=productService.getBase();
+    producto.nuevo = true;
     res.render('Practica3', producto);
 });
 
@@ -64,7 +65,6 @@ router.post('/', (req, res) => {
 });
 
 router.get('/producto/:id', (req, res) => {
-    console.log('REQ PARAMS',req.params.id)
     let producto = productService.getProduct(req.params.id);
     let comments = productService.getComments(req.params.id,0,2);
     res.render('Practica2', {producto,comments});
@@ -80,7 +80,7 @@ router.get('/product/:id/delete', (req, res) => {
 //lleva a modifcicacion
 router.get('/product/edit/:id', (req, res) => {
     let producto = productService.getProduct(req.params.id);
-    res.render('modificacion', producto);
+    res.render('Practica3', producto);
 });
 
 //borra producto y crea uno nuevo
@@ -101,7 +101,7 @@ router.post('/formedit/:id', (req, res) => {
         let id = req.params.id;
         let prod = { id, nombreProd, precioProd, imgProd, imgProd2, descProd,
             tipoProd, tipo, cargaProd, carga, capProd, cap, colorProd, nombreColor, comments, nextIdComment, error};
-        res.render('modificacion', prod);
+        res.render('Practica3', prod);
     } else {
     productService.editProduct(req.params.id, { nombreProd, precioProd, imgProd, imgProd2, descProd,
         tipoProd, tipo, cargaProd, carga, capProd, cap, colorProd, nombreColor, comments, nextIdComment});

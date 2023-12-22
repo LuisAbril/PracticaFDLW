@@ -478,6 +478,12 @@
    padding:0px 10px 0px 10px;
 }
 
+.shoppingCart {
+   color: rgb(15, 9, 102);
+   font-size: 36px;
+   padding: 0px 10px 0px 10px;
+}
+
 .mas:hover{
    color:white;
    transition-duration: 0.2s;
@@ -759,4 +765,11 @@
 }
 .imgCarrito{
    max-width: 100%;
+}
+#buttonShop{
+   margin:10px;
+   min-width: 40px;
+   min-height: 20px;
+   text-align: center;
+   border-radius: 5px;
 }

@@ -135,24 +135,19 @@ router.post('/producto/:id', (req, res) => {
 });
 
 // Ruta para agregar un producto al carrito
-router.post('/agregar-al-carrito', (req, res) => {
-    const precio = 123; 
+router.post('/agregar-al-carrito/:id', (req, res) => {
+    const producto = productService.getProduct(req.params.id); 
   
     // Verifica si hay un carrito en la sesión, de lo contrario, inicializa uno vacío
     req.session.carrito = req.session.carrito || [];
   
     // Agrega el producto al carrito
-    req.session.carrito.push(precio);
+    req.session.carrito.push(producto);
   
     res.render('pageCarrito', {carrito: req.session.carrito});
 });
   
 // Ruta para ver el contenido del carrito
-router.get('/ver-carrito', (req, res) => {
-    const carrito = req.session.carrito || [];
-    res.json(carrito);
-});
-
 router.get('/render-carrito', (req, res) => {
     req.session.carrito = req.session.carrito || [];
   

@@ -47,7 +47,7 @@
                     <pre class="specs">{{producto.descProd}}</pre>
                     
                     <div class="precioProd">{{producto.precioProd}}€</div>
-                    <div class="btn btn-lg" id="comprar"><i class="bi bi-cart carrito"></i> Comprar</i></div>
+                    <div class="btn btn-lg" id="comprar" onclick="agregarCarrito({{producto.id}})"><i class="bi bi-cart carrito"></i> Comprar</i></div>
                 </div>
             </div> 
             <div class="comentbox"> <p class="titlecoment">Comentarios</p>
@@ -124,7 +124,8 @@
                 </div>
             </a>
         </div>
-<script src="/script2.js"></script>
+    <script src="/script2.js"></script>
+    <script src="/carrito.js"></script>
 </body>
 
 </html>

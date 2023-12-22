@@ -1,10 +1,11 @@
-async function agregarCarrito(){
-    const response = await fetch("/agregar-al-carrito", {method: 'POST'});
+async function agregarCarrito(id){
+    console.log(id);
+    const response = await fetch("/agregar-al-carrito/"+id, {method: 'POST'});
     const newProdCarrito = await response.text();
 
     const carritoDiv = document.getElementById('carrito');
 
-    carritoDiv.innerHTML = '<button onclick="agregarCarrito()">Add</button>' + newProdCarrito;
+    carritoDiv.innerHTML = newProdCarrito;
 }
 
 async function renderCarrito(){
@@ -13,7 +14,7 @@ async function renderCarrito(){
 
     const carritoDiv = document.getElementById('carrito');
 
-    carritoDiv.innerHTML = '<button onclick="agregarCarrito()">Add</button>' + prodsCarrito;
+    carritoDiv.innerHTML = prodsCarrito;
 }
 
 function mostrarCarrito(){

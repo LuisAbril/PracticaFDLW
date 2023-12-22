@@ -734,3 +734,29 @@
    margin-top: -15px;
    margin-bottom: 20px;
 }
+
+.prodCarrito{
+   display: grid;
+   background: white;
+   max-width: 100%;
+   grid-template-columns: [x0] 25% [x1] 75% [x2];
+   grid-template-rows: [y0] 50% [y1] 50% [y2];
+   border: solid 1px;
+   border-color:rgb(82, 78, 78);
+}
+
+.nombreCarrito{
+   grid-column: x1/x2;
+   grid-row: y0/y1;
+}
+.precioCarrito{
+   grid-column: x1/x2;
+   grid-row: y1/y2;
+}
+.imagenCarrito{
+   grid-column: x0/x1;
+   grid-row: y0/y2;
+}
+.imgCarrito{
+   max-width: 100%;
+}

@@ -56,6 +56,7 @@ router.post('/', (req, res) => {
         let error = true;
         let prod = { nombreProd, precioProd, imgProd, imgProd2, descProd,
             tipoProd, tipo, cargaProd, carga, capProd, cap, colorProd, nombreColor, comments, nextIdComment, error};
+        prod.nuevo = true;
         res.render('Practica3',prod);
     } else {
         productService.addProduct({ nombreProd, precioProd, imgProd, imgProd2, descProd,

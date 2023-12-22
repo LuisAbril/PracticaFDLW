@@ -27,7 +27,7 @@ function validarTitulo(input) {
     const msgError = document.getElementById("msgErrorTitulo");
     const boton = document.getElementById("sub");
     if (!input.value){
-        msgError.textContent="El nombre del producto no puede estar vacío";
+        msgError.innerHTML="<i class='bi bi-exclamation-circle'></i> El nombre del producto no puede estar vacío";
         boton.disabled = true;
         camposErroneos[0]=1;
     } else {
@@ -38,7 +38,7 @@ function validarTitulo(input) {
             camposErroneos[0]=0;
             habilitarBoton(boton);
         } else {
-            msgError.textContent="El nombre del producto debe empezar por mayúscula";
+            msgError.innerHTML="<i class='bi bi-exclamation-circle'></i> El nombre del producto debe empezar por mayúscula";
             boton.disabled=true;
             camposErroneos[0]=1;
         }
@@ -62,7 +62,7 @@ function validarURL1(input) {
     const msgError = document.getElementById("msgErrorURL1");
     const boton = document.getElementById("sub");
     if (!input.value){
-        msgError.textContent="La URL no puede estar vacía";
+        msgError.innerHTML="<i class='bi bi-exclamation-circle'></i> La URL no puede estar vacía";
         boton.disabled=true;
         camposErroneos[1]=1;
     } else {
@@ -72,7 +72,7 @@ function validarURL1(input) {
             camposErroneos[1]=0;
             habilitarBoton(boton); 
         } else {
-            msgError.textContent="La URL no es valida";
+            msgError.innerHTML="<i class='bi bi-exclamation-circle'></i> La URL no es valida";
             boton.disabled=true;
             camposErroneos[1]=1;
         }
@@ -96,7 +96,7 @@ function validarURL2(input) {
     const msgError = document.getElementById("msgErrorURL2");
     const boton = document.getElementById("sub");
     if (!input.value){
-        msgError.textContent="La URL no puede estar vacía";
+        msgError.innerHTML="<i class='bi bi-exclamation-circle'></i> La URL no puede estar vacía";
         boton.disabled=true;
         camposErroneos[2]=1;
     } else {
@@ -106,7 +106,7 @@ function validarURL2(input) {
             camposErroneos[2]=0;
             habilitarBoton(boton); 
         } else {
-            msgError.textContent="La URL no es valida";
+            msgError.innerHTML="<i class='bi bi-exclamation-circle'></i> La URL no es valida";
             boton.disabled=true;
             camposErroneos[2]=1;
         }
@@ -130,7 +130,7 @@ function validarDesc(input) {
     const msgError = document.getElementById("msgErrorDesc");
     const boton = document.getElementById("sub");
     if (!input.value){
-        msgError.textContent="La descripción del producto no puede estar vacía";
+        msgError.innerHTML="<i class='bi bi-exclamation-circle'></i> La descripción del producto no puede estar vacía";
         boton.disabled=true;
         camposErroneos[3]=1;
     } else {
@@ -139,7 +139,7 @@ function validarDesc(input) {
             camposErroneos[3]=0;
             habilitarBoton(boton);
         } else {
-            msgError.textContent="La descripción del producto debe tener entre 50 y 500 caracteres";
+            msgError.innerHTML="<i class='bi bi-exclamation-circle'></i> La descripción del producto debe tener entre 50 y 500 caracteres";
             boton.disabled=true;
             camposErroneos[3]=1;
         }

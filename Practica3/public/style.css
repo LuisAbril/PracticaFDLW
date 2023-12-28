@@ -30,6 +30,11 @@
    grid-template-columns: [x0] 1fr [x1] 15fr [x2] 3fr [x3];
    align-items: center;
 }
+#topCarrito{
+   display:grid;
+   grid-template-columns: [x0] 1fr [x1] 15fr [x2] 3fr [x3] 1fr [x4];
+   align-items: center;
+}
 .form-control{
    min-width: 150px;
 }
@@ -546,9 +551,6 @@
    transition:.1s;
    font-weight: 500;
 }
-.carrito{
-   padding-right: 6px;
-}
 .precioProd{
    font-size: 40px;
    font-family: gruppo, sans-serif;
@@ -720,11 +722,26 @@
 
 #carrito{
    position: absolute;
-   right:50px;
-   top:50px;
+   right:6%;
+   top:13%;
    width: 300px;
-   height: 300px;
-   background-color: #ccc;
+   height: fit-content;
+   min-height: 100px;
+   max-height: 342px;
+   overflow-y: auto;
+   background-color: rgb(236, 236, 236);
+}
+
+#precioTotal{
+   width: fit-content;
+   margin: 5px;
+   padding-left: 10px;
+   padding-right: 10px;
+   padding-top: 2px;
+   height: 30px;
+   border-radius: 15px;
+   color:white;
+   background-color: #06104b;
 }
 
 .msgError {
@@ -743,9 +760,10 @@
 
 .prodCarrito{
    display: grid;
-   background: white;
+   background: whitesmoke;
    max-width: 100%;
-   grid-template-columns: [x0] 25% [x1] 75% [x2];
+   height: 75px;
+   grid-template-columns: [x0] 25% [x1] 65% [x2] 10% [x3];
    grid-template-rows: [y0] 50% [y1] 50% [y2];
    border: solid 1px;
    border-color:rgb(82, 78, 78);
@@ -765,11 +783,65 @@
 }
 .imgCarrito{
    max-width: 100%;
+   max-height: 100%;
 }
+.quitarCarrito{
+   background-color: #06104b;
+   color: white;
+   font-size: smaller;
+   font-weight: bolder;
+   text-align: center;
+   border: none;
+   margin-top: 5px;
+   width: 20px;
+   height: 15px;
+   border-radius: 5px;
+}
+.bi-dash{
+   position: relative;
+   top: -4px;
+   right: 2px;
+}
+
 #buttonShop{
    margin:10px;
    min-width: 40px;
    min-height: 20px;
    text-align: center;
    border-radius: 5px;
+}
+
+.desplegarCarrito{
+   margin-top: 23px;
+   margin-left: 20px;
+   height: 40px;
+   width: 45px;
+   border-radius: 15px;
+   border: transparent;
+   color: white;
+   background-color: rgb(15, 9, 102);
+}
+
+.desplegarCarrito:hover{
+   background-color: rgb(9, 8, 83);
+   transition-duration: .1s;
+}
+
+.noCarrito{
+   margin-top: 20px;
+   color:rgba(0, 0, 0, 0.75);
+   text-align: center;
+}
+
+.numCarrito{
+   position: relative;
+   top:-46px;
+   right: -53px;
+   font-size: small;
+   text-align: center;
+   font-style: normal;
+   background-color: crimson;
+   height: 20px;
+   width: 20px;
+   border-radius: 100px;
 }

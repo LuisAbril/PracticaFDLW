@@ -16,11 +16,19 @@
 <body>
     <div class="grid">
         <div class="header"></div>
-        <div class="header" id="top">
-            <div class="pagename"><img src="https://cdn-icons-png.flaticon.com/512/1155/1155340.png" class="logo">
+        <div class="header" id="topCarrito">
+            <div class="pagename">
+                <img src="https://cdn-icons-png.flaticon.com/512/1155/1155340.png" class="logo">
             </div>
+
             <h1 class="pagename" id="nombre"><p>APPEL</p></h1>
+            
             <div class="btn btn-lg back" id="btnBack" onclick="location.href='/'">Seguir Buscando <i class="bi bi-search"></i></div>
+
+            <div>
+                <button class="desplegarCarrito" id="btnCarrito" onclick="mostrarCarrito()"><i class="bi bi-cart"></i></button>
+                <label for="btnCarrito" class="numCarrito">{{carritoSize}}</label>
+            </div>
         </div>
         
         <div class="header"></div>
@@ -124,6 +132,12 @@
                 </div>
             </a>
         </div>
+
+        <div id="carrito" style="display:none">
+            <div id="precioTotal">Precio total: 0,00€</div>
+            {{>pageCarrito}}
+        </div>
+
     <script src="/script2.js"></script>
     <script src="/carrito.js"></script>
 </body>

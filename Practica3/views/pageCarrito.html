@@ -10,5 +10,13 @@
     <div class="imagenCarrito">
         <img class="imgCarrito" src="{{imgProd}}">
     </div>
+    <div>
+        <button class="quitarCarrito" onclick="quitarCarrito({{idCarrito}})"><i class="bi bi-dash "></i></button>
+    </div>
 </div>
+{{/carrito}}
+
+
+{{^carrito}}
+<div class="noCarrito">No hay nada en el carrito</div>
 {{/carrito}}

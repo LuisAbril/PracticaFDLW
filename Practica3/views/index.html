@@ -16,7 +16,7 @@
 <body>
 <div class="grid">
     <div class="header"></div>
-    <div class="header" id="top">
+    <div class="header" id="topCarrito">
         <div class="pagename">
             <img src="https://cdn-icons-png.flaticon.com/512/1155/1155340.png" class="logo">
         </div>
@@ -31,6 +31,11 @@
             </div>
                 
         </form>
+
+        <div>
+            <button class="desplegarCarrito" id="btnCarrito" onclick="mostrarCarrito()"><i class="bi bi-cart"></i></button>
+            <label for="btnCarrito" class="numCarrito">{{productos.carritoSize}}</label>
+        </div>
 
     </div>
     <div class="header"></div>
@@ -69,14 +74,12 @@
                 </div>
             </a>
         </div>
-        <div class="add doble shoppingCart">
-            <a onclick="mostrarCarrito()"><i class="bi bi-cart carrito"></i></a>
-            </div>
+
     </div>
     <div class="footer"></div>
 </div>
-
 <div id="carrito" style="display:none">
+    <div id="precioTotal">Precio total: 0,00€</div>
     {{>pageCarrito}}
 </div>
 

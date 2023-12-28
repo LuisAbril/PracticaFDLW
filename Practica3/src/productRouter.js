@@ -2,9 +2,15 @@ import express from 'express';
 import * as productService from './productService.js';
 
 const router = express.Router();
+let nextIdCarrito = 0;
 
 router.get('/', (req, res) => {
     const productos = productService.getProducts(0,4);
+    if (req.session.carrito) {
+        productos.carritoSize = req.session.carrito.length;
+    } else {
+        productos.carritoSize = 0;
+    }
     res.render('index', {
         productos: productos
     });
@@ -68,7 +74,13 @@ router.post('/', (req, res) => {
 router.get('/producto/:id', (req, res) => {
     let producto = productService.getProduct(req.params.id);
     let comments = productService.getComments(req.params.id,0,2);
-    res.render('Practica2', {producto,comments});
+    let carritoSize;
+    if (req.session.carrito) {
+        carritoSize = req.session.carrito.length;
+    } else {
+        carritoSize = 0;
+    }
+    res.render('Practica2', {producto,comments,carritoSize});
 });
 
 //eliminacion
@@ -137,12 +149,22 @@ router.post('/producto/:id', (req, res) => {
 // Ruta para agregar un producto al carrito
 router.post('/agregar-al-carrito/:id', (req, res) => {
     const producto = productService.getProduct(req.params.id); 
-  
+    producto.idCarrito=nextIdCarrito;
+    nextIdCarrito++;
     // Verifica si hay un carrito en la sesión, de lo contrario, inicializa uno vacío
     req.session.carrito = req.session.carrito || [];
   
     // Agrega el producto al carrito
     req.session.carrito.push(producto);
+  
+    res.render('pageCarrito', {carrito: req.session.carrito});
+});
+
+router.post('/quitar-del-carrito/:id', (req, res) => {
+
+    if(req.session.carrito) {
+        req.session.carrito=req.session.carrito.filter(producto => producto.idCarrito!=req.params.id);
+    }
   
     res.render('pageCarrito', {carrito: req.session.carrito});
 });

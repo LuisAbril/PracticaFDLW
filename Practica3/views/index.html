@@ -26,7 +26,7 @@
         <form role="form" class="finder">
             <div class="form-group">
 
-                <input type="text" class="form-control" id="producto" placeholder="Buscar...">
+                <input type="text" class="form-control" id="searchInput"  placeholder="Buscar...">
                 
             </div>
                 
@@ -41,7 +41,7 @@
     <div class="header"></div>
     <div class="sidebar"></div>
     <div class="content">
-        <div class="container main">
+        <div class="container main" id="listaResultados">
             {{>pageProds}}
         </div>
 
@@ -82,7 +82,7 @@
     <div id="precioTotal">Precio total: 0,00€</div>
     {{>pageCarrito}}
 </div>
-
+<script src="search.js"></script>
 <script src="carrito.js"></script>
 <script src="script.js"></script>
 </body>

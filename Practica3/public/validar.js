@@ -43,6 +43,13 @@ function validarTitulo(input) {
             camposErroneos[0]=1;
         }
     }
+    for (let producto of productos.values()) {
+        if (producto.nombreProd === input) {
+            msgError.innerHTML = "<i class='bi bi-exclamation-circle'></i> Hay dos productos con el mismo nombre"
+            boton.disabled = true;
+            camposErroneos[0] = 1;
+        }
+    }
 }
 
 function waitTimerURL1(input) {

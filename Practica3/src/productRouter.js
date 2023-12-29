@@ -176,4 +176,9 @@ router.get('/render-carrito', (req, res) => {
     res.render('pageCarrito', {carrito: req.session.carrito});
 });
 
+router.get('/get-productos', (req,res) => {
+    let productos = productService.getProducts();
+    res.json(productos);
+});
+
 export default router;

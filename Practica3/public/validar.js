@@ -23,7 +23,7 @@ function waitTimerTitulo(input) {
     })
 }
 
-function validarTitulo(input) {
+async function validarTitulo(input) {
     const msgError = document.getElementById("msgErrorTitulo");
     const boton = document.getElementById("sub");
     if (!input.value){
@@ -34,20 +34,22 @@ function validarTitulo(input) {
         const primL = input.value[0];
         const reg = /[A-Z]/;
         if(reg.test(primL)){
-            msgError.textContent="";
-            camposErroneos[0]=0;
-            habilitarBoton(boton);
+            const response = await fetch("/get-productos");
+            let productos = await response.json();
+            productos = productos.filter(producto => producto.nombreProd.toLowerCase()===input.value.toLowerCase());
+            if(productos.length===0) { //si no se repite
+                msgError.textContent="";
+                camposErroneos[0]=0;
+                habilitarBoton(boton);
+            } else { //si se repite
+                msgError.innerHTML = "<i class='bi bi-exclamation-circle'></i> Hay dos productos con el mismo nombre"
+                boton.disabled = true;
+                camposErroneos[0] = 1;
+            }
         } else {
             msgError.innerHTML="<i class='bi bi-exclamation-circle'></i> El nombre del producto debe empezar por mayúscula";
             boton.disabled=true;
             camposErroneos[0]=1;
-        }
-    }
-    for (let producto of productos.values()) {
-        if (producto.nombreProd === input) {
-            msgError.innerHTML = "<i class='bi bi-exclamation-circle'></i> Hay dos productos con el mismo nombre"
-            boton.disabled = true;
-            camposErroneos[0] = 1;
         }
     }
 }

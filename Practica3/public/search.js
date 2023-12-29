@@ -11,19 +11,31 @@ function waitingSearch(input) {
 
     })
 }
-
+const template = `
+{{#productos}}
+<div class="cuadrado">
+    <div class="preview">
+        <a href="producto/{{id}}" class="redir">
+            <img src="{{imgProd}}" class="prodimg">
+            <div class="prodname">{{nombreProd}}</div>
+            <div class="price">Desde {{precioProd}}€</div>
+        </a>
+    </div>
+</div>
+{{/productos}}
+`;
 async function search(input) {
     const response = await fetch("/get-productos");
     let productos = await response.json();
     productos = productos.filter(producto => producto.nombreProd.toLowerCase().includes(input.value.toLowerCase()));
-
+    console.log(productos);
     mostrarProductos(productos);
 }
 function mostrarProductos(productosArray) {
-    const template = document.getElementById('templateProductos').innerHTML;
+    const container = document.getElementById('container');
     const rendered = Mustache.render(template, { productos: productosArray });
-    document.getElementById('listaProductos').innerHTML = rendered;
+    console.log(rendered);
+    container.innerHTML = rendered;
 }
 
-// Llamar a la función para mostrar los productos al cargar la página
-document.addEventListener('DOMContentLoaded', mostrarProductos);
+

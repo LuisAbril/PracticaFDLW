@@ -32,7 +32,7 @@ async function search(input) {
     mostrarProductos(productos);
 }
 function mostrarProductos(productosArray) {
-    const container = document.getElementById('container');
+    const container = document.getElementById('busqueda');
     const rendered = Mustache.render(template, { productos: productosArray });
     console.log(rendered);
     container.innerHTML = rendered;

@@ -39,6 +39,9 @@ function mostrarProductos(productosArray) {
     const rendered = Mustache.render(template, { productos: productosArray });
     console.log(rendered);
     container.innerHTML = rendered;
+
+    const loadButton = document.getElementById('load');
+    loadButton.disabled = true;
 }
 
 

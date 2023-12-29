@@ -23,6 +23,9 @@ const template = `
     </div>
 </div>
 {{/productos}}
+{{^productos}}
+<div class="no-products-message">No se encontraron productos.</div>
+{{/productos}}
 `;
 async function search(input) {
     const response = await fetch("/get-productos");

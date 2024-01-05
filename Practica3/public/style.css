@@ -845,3 +845,9 @@
    width: 20px;
    border-radius: 100px;
 }
+
+.no-products-message{
+   margin: 15% auto 15% auto;
+   font-size: x-large;
+   color:#06104b;
+}

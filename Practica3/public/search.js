@@ -1,7 +1,7 @@
 
 function waitingSearch(input) {
     var typingTimer;
-    var endTypingTimer = 800; //ms
+    var endTypingTimer = 400; //ms
     input.addEventListener("input", function () {
         clearTimeout(typingTimer);
 
@@ -28,20 +28,22 @@ const template = `
 {{/productos}}
 `;
 async function search(input) {
-    const response = await fetch("/get-productos");
-    let productos = await response.json();
-    productos = productos.filter(producto => producto.nombreProd.toLowerCase().includes(input.value.toLowerCase()));
-    console.log(productos);
-    mostrarProductos(productos);
+    if(!input.value){
+        window.location.href="/";
+    } else {
+        const response = await fetch("/get-productos");
+        let productos = await response.json();
+        productos = productos.filter(producto => producto.nombreProd.toLowerCase().includes(input.value.toLowerCase()));
+        mostrarProductos(productos);
+    }
 }
 function mostrarProductos(productosArray) {
     const container = document.getElementById('busqueda');
     const rendered = Mustache.render(template, { productos: productosArray });
-    console.log(rendered);
     container.innerHTML = rendered;
 
     const loadButton = document.getElementById('load');
-    loadButton.disabled = true;
+    loadButton.style.display = "none";
 }
 
 

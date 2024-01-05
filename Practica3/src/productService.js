@@ -28,7 +28,7 @@ addProduct({
 })
 
 addProduct({
-    nombreProd: "AirPuds 3ªGen", precioProd: "1219,00", imgProd: "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_99832568?x=960&y=720&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=960&ey=720&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=960&cdy=720", imgProd2: "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_97316314?x=960&y=720&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=960&ey=720&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=960&cdy=720",
+    nombreProd: "AirPuds 3ªGen", precioProd: "199,00", imgProd: "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_99832568?x=960&y=720&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=960&ey=720&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=960&cdy=720", imgProd2: "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_97316314?x=960&y=720&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=960&ey=720&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=960&cdy=720",
     tipoProd: "Auriculares", cargaProd: "USB-C", capProd: "No Aplica", colorProd: "#FFFFFF", nombreColor: "Blanco", descProd: "\n- APPEL AirPuds (2022 3ª gen)  \n- Inalámbricos \n- Bluetooth®\n- Estuche Carga no Inalámbrica\n- Chip H1\n- Siri\n- Blanco",
     tipo: [{ProdN: "Movil", selected: false}, {ProdN: "Tableta", selected: false},{ProdN: "Ordenador", selected: false}, {ProdN: "Reloj", selected: false}, {ProdN: "Auriculares", selected: true}, {ProdN: "Accesorios", selected: false}],
     carga: [{ CargaN: "Ninguno", selected: false }, { CargaN: "Lighting", selected: false }, { CargaN: "USB-C", selected: true }, { CargaN: "Inalambrico", selected: false }],
@@ -37,7 +37,7 @@ addProduct({
 });
 
 addProduct({
-    nombreProd: "Funda Aiphone 12", precioProd: "33,00", imgProd: "https://www.backmarket.es/cdn-cgi/image/format%3Dauto%2Cquality%3D75%2Cwidth%3D828/https://d2e6ccujb3mkqf.cloudfront.net/3dff6202-8b26-4e90-929d-d93d7e62809f-1_d79b1281-d2c3-445a-b9d3-beb2662b0bdf.jpg", imgProd2: "https://www.backmarket.es/cdn-cgi/image/format%3Dauto%2Cquality%3D75%2Cwidth%3D828/https://d2e6ccujb3mkqf.cloudfront.net/3dff6202-8b26-4e90-929d-d93d7e62809f-2_2a092461-148e-4fd4-b472-4398258a60b1.jpg",
+    nombreProd: "Funda AiPhone 12", precioProd: "33,00", imgProd: "https://www.backmarket.es/cdn-cgi/image/format%3Dauto%2Cquality%3D75%2Cwidth%3D828/https://d2e6ccujb3mkqf.cloudfront.net/3dff6202-8b26-4e90-929d-d93d7e62809f-1_d79b1281-d2c3-445a-b9d3-beb2662b0bdf.jpg", imgProd2: "https://www.backmarket.es/cdn-cgi/image/format%3Dauto%2Cquality%3D75%2Cwidth%3D828/https://d2e6ccujb3mkqf.cloudfront.net/3dff6202-8b26-4e90-929d-d93d7e62809f-2_2a092461-148e-4fd4-b472-4398258a60b1.jpg",
     tipoProd: "Accesorios", cargaProd: "Ninguno", capProd: "No Aplica", colorProd: "#0E75CF", nombreColor: "Azul", descProd: "\n- Funda Appel AiPhone 12 \n- MagSafe \n- Silicona \n- Azul",
     tipo: [{ProdN: "Movil", selected: false}, {ProdN: "Tableta", selected: false},{ProdN: "Ordenador", selected: false}, {ProdN: "Reloj", selected: false}, {ProdN: "Auriculares", selected: false}, {ProdN: "Accesorios", selected: true}],
     carga: [{ CargaN: "Ninguno", selected: true }, { CargaN: "Lighting", selected: false }, { CargaN: "USB-C", selected: false }, { CargaN: "Inalambrico", selected: false }],
@@ -64,7 +64,7 @@ addProduct({
 })
 
 addProduct({
-    nombreProd: "MacBuk Er", precioProd: "33,00", imgProd: "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_83551463?x=960&y=720&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=960&ey=720&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=960&cdy=720", imgProd2:"https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_79165943?x=960&y=720&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=960&ey=720&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=960&cdy=720",
+    nombreProd: "MacBuk Er", precioProd: "1298,00", imgProd: "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_83551463?x=960&y=720&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=960&ey=720&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=960&cdy=720", imgProd2:"https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_79165943?x=960&y=720&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=960&ey=720&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=960&cdy=720",
     tipoProd: "Ordenador", cargaProd: "USB-C", capProd: "1 T", colorProd: "#A8B3B8", nombreColor: "Gris Espacial", descProd:"\n- Appel MacBuk Er (2020) \n- 1 T \n- Gris Espacial \n- 13,3 pulgadas \n- 2560 x 1600 píxeles \n- 1,29 kg",
     tipo: [{ProdN: "Movil", selected: false}, {ProdN: "Tableta", selected: false},{ProdN: "Ordenador", selected: true}, {ProdN: "Reloj", selected: false}, {ProdN: "Auriculares", selected: false}, {ProdN: "Accesorios", selected: false}],
     carga: [{ CargaN: "Ninguno", selected: false }, { CargaN: "Lighting", selected: false }, { CargaN: "USB-C", selected: true }, { CargaN: "Inalambrico", selected: false }],

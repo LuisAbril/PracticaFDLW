@@ -39,7 +39,7 @@ function mostrarCarrito(){
         renderCarrito();
         carritoDiv.style.display = "block";
     } else {
-        carritoDiv.style.display = "none"
+        carritoDiv.style.display = "none";
     }
 }
 
